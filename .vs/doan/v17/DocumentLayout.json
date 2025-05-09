@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Web N\u00E2ng Cao\\doan\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "home.aspx",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx",
+              "RelativeDocumentMoniker": "src\\home\\home.aspx",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx",
+              "RelativeToolTip": "src\\home\\home.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-09T06:45:26.917Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
