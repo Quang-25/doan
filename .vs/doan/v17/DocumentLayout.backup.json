@@ -1,16 +1,23 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Web N\u00E2ng Cao\\doan\\",
+<<<<<<< HEAD
+  "Documents": [],
+=======
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|d:\\web n\u00E2ng cao\\doan\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
+>>>>>>> 9633abc5d88f4482ed43bf27f17638d4cda6b578
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
+      "DocumentGroups": []
+=======
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -32,6 +39,7 @@
           ]
         }
       ]
+>>>>>>> 9633abc5d88f4482ed43bf27f17638d4cda6b578
     }
   ]
 }
