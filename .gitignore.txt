@@ -1,0 +1,33 @@
+# Thư mục tạm của Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# File cấu hình riêng tư
+*.userprefs
+*.dbmdl
+*.psess
+*.vsp
+*.pdb
+
+# File tạm thời hoặc lock
+*.log
+*.cache
+*.tmp
+*.bak
+*.vsidx
+
+# Auto-generated
+*.Generated.cs
+*.g.cs
+*.g.i.cs
+
+# Thư viện cục bộ (nếu có)
+packages/
+*.nupkg
