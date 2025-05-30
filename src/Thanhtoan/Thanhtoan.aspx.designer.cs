@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace doan.src.home
+namespace doan.src.Thanhtoan
 {
 
 
-    public partial class home
+    public partial class Thanhtoan
     {
 
         /// <summary>
@@ -24,30 +24,39 @@ namespace doan.src.home
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblgiohang control.
+        /// img control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblgiohang;
+        protected global::System.Web.UI.WebControls.Image img;
 
         /// <summary>
-        /// txtSearch control.
+        /// lblTenSp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+        protected global::System.Web.UI.WebControls.Label lblTenSp;
 
         /// <summary>
-        /// rptSanPham control.
+        /// lblTen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptSanPham;
+        protected global::System.Web.UI.WebControls.Label lblTen;
+
+        /// <summary>
+        /// lblsanpham control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsanpham;
     }
 }
