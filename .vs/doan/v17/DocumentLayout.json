@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "D:\\Web N\u00E2ng Cao\\doan\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-=======
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|d:\\web n\u00E2ng cao\\doan\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|d:\\web n\u00E2ng cao\\doan\\src\\trangchu admin\\khachhang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\khachhang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|d:\\web n\u00E2ng cao\\doan\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
->>>>>>> 9633abc5d88f4482ed43bf27f17638d4cda6b578
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|d:\\web n\u00E2ng cao\\doan\\src\\trangchu admin\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|d:\\web n\u00E2ng cao\\doan\\src\\trangchu admin\\dathang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\dathang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\sanpham.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\sanpham.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|d:\\web n\u00E2ng cao\\doan\\src\\trangchu admin\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\home\\trangchu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\trangchu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\giohang\\giohang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\giohang\\giohang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|D:\\Web N\u00E2ng Cao\\doan\\src\\giohang\\giohang.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\giohang\\giohang.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,27 +62,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-<<<<<<< HEAD
-=======
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-09T07:08:03.579Z",
+              "DocumentIndex": 10,
+              "Title": "home.aspx.cs",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx.cs",
+              "RelativeDocumentMoniker": "src\\home\\home.aspx.cs",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx.cs",
+              "RelativeToolTip": "src\\home\\home.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T08:14:05.938Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
->>>>>>> 9633abc5d88f4482ed43bf27f17638d4cda6b578
               "Title": "home.aspx",
               "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\home\\home.aspx",
               "RelativeDocumentMoniker": "src\\home\\home.aspx",
@@ -50,7 +88,156 @@
               "RelativeToolTip": "src\\home\\home.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-09T06:45:26.917Z",
+              "WhenOpened": "2025-05-09T08:01:52.83Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "admin.Master",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\admin.Master",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\admin.Master",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\admin.Master",
+              "RelativeToolTip": "src\\trangchu admin\\admin.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-30T08:40:16.804Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KhachHang.aspx",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\KhachHang.aspx",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\KhachHang.aspx",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\KhachHang.aspx",
+              "RelativeToolTip": "src\\trangchu admin\\KhachHang.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-30T17:42:47.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "admin.css",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\admin.css",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\admin.css",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\admin.css",
+              "RelativeToolTip": "src\\trangchu admin\\admin.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-30T17:28:44.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "admin.Master.cs",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\admin.Master.cs",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\admin.Master.cs",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\admin.Master.cs",
+              "RelativeToolTip": "src\\trangchu admin\\admin.Master.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwBYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T17:26:01.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "sanpham.aspx",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\sanpham.aspx",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\sanpham.aspx",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\sanpham.aspx",
+              "RelativeToolTip": "src\\trangchu admin\\sanpham.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-30T08:43:29.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatHang.aspx",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\DatHang.aspx",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\DatHang.aspx",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\DatHang.aspx",
+              "RelativeToolTip": "src\\trangchu admin\\DatHang.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-30T08:43:25.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "lienhe.aspx",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\lienhe.aspx",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\lienhe.aspx",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\trangchu admin\\lienhe.aspx",
+              "RelativeToolTip": "src\\trangchu admin\\lienhe.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-30T08:42:17.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "giohang.aspx",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\Giohang\\giohang.aspx",
+              "RelativeDocumentMoniker": "src\\Giohang\\giohang.aspx",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\Giohang\\giohang.aspx",
+              "RelativeToolTip": "src\\Giohang\\giohang.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-22T14:38:08.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "trangchu.css",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\home\\trangchu.css",
+              "RelativeDocumentMoniker": "src\\home\\trangchu.css",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\home\\trangchu.css",
+              "RelativeToolTip": "src\\home\\trangchu.css",
+              "ViewState": "AgIAAJUBAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-11T12:31:33.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "giohang.aspx.cs",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\src\\Giohang\\giohang.aspx.cs",
+              "RelativeDocumentMoniker": "src\\Giohang\\giohang.aspx.cs",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\src\\Giohang\\giohang.aspx.cs",
+              "RelativeToolTip": "src\\Giohang\\giohang.aspx.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:54:03.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\Web N\u00E2ng Cao\\doan\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "D:\\Web N\u00E2ng Cao\\doan\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-19T07:19:31.302Z",
               "EditorCaption": ""
             }
           ]
