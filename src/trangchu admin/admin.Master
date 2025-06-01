@@ -15,7 +15,7 @@
             <div class="pageAdmin">
             <div class="leftAdminNavigationBar">
                 <div class="logoPage">
-                     <img class="logo" src="https://demo037187.web30s.vn/datafiles/40264/upload/images/logo%281%29.png" />
+                     <img class="logo" src="https://demo037102.web30s.vn/datafiles/34058/upload/images/logo.png" />
                 </div>
                    <asp:Panel runat="server" ID="p_boxNavigationBar1" CssClass="boxNavigationBar">
                        <span>Khách hàng</span>
