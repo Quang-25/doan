@@ -188,6 +188,7 @@
     <Content Include="src\trangchu admin\sanpham.aspx" />
     <Content Include="src\trangchu admin\DatHang.aspx" />
     <Content Include="src\trangchu admin\KhachHang.aspx" />
+    <Content Include="src\trangchu admin\sanpham.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
