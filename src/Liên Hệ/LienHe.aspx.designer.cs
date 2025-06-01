@@ -7,21 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace doan.src.trangchu_admin
+namespace doan.src.Liên_Hệ
 {
 
 
-    public partial class lienhe
+    public partial class LienHe
     {
 
         /// <summary>
-        /// lblHoTen control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHoTen;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// lblHoten control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHoten;
 
         /// <summary>
         /// txtHoTen control.
@@ -31,6 +40,15 @@ namespace doan.src.trangchu_admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtHoTen;
+
+        /// <summary>
+        /// rfvHoten control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvHoten;
 
         /// <summary>
         /// lblEmail control.
@@ -51,6 +69,24 @@ namespace doan.src.trangchu_admin
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+
+        /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+
+        /// <summary>
         /// lblSDT control.
         /// </summary>
         /// <remarks>
@@ -69,94 +105,112 @@ namespace doan.src.trangchu_admin
         protected global::System.Web.UI.WebControls.TextBox txtSDT;
 
         /// <summary>
-        /// lblDiaChi control.
+        /// rfvSDT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDiaChi;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSDT;
 
         /// <summary>
-        /// txtDiaChi control.
+        /// revSDT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSDT;
 
         /// <summary>
-        /// lblNoiDung control.
+        /// lblDiachi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNoiDung;
+        protected global::System.Web.UI.WebControls.Label lblDiachi;
 
         /// <summary>
-        /// txtMoTa control.
+        /// txtDiachi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMoTa;
+        protected global::System.Web.UI.WebControls.TextBox txtDiachi;
 
         /// <summary>
-        /// hdID control.
+        /// rfvDiachi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdID;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDiachi;
 
         /// <summary>
-        /// btnThem control.
+        /// lblNoidung control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnThem;
+        protected global::System.Web.UI.WebControls.Label lblNoidung;
 
         /// <summary>
-        /// btnSua control.
+        /// txtNoidung control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSua;
+        protected global::System.Web.UI.WebControls.TextBox txtNoidung;
 
         /// <summary>
-        /// btnXoa control.
+        /// rfvNoidung control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnXoa;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNoidung;
 
         /// <summary>
-        /// txtTimKiem control.
+        /// txtcaptcha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTimKiem;
+        protected global::System.Web.UI.WebControls.TextBox txtcaptcha;
 
         /// <summary>
-        /// btnTim control.
+        /// lblCapcha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTim;
+        protected global::System.Web.UI.WebControls.Label lblCapcha;
+
+        /// <summary>
+        /// btnTaoLaiMa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnTaoLaiMa;
+
+        /// <summary>
+        /// rfvCaptcha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCaptcha;
 
         /// <summary>
         /// lblMessage control.
@@ -168,21 +222,21 @@ namespace doan.src.trangchu_admin
         protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
-        /// GridView1 control.
+        /// btnGui control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button btnGui;
 
         /// <summary>
-        /// Literal1 control.
+        /// btnNhaplai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal1;
+        protected global::System.Web.UI.WebControls.Button btnNhaplai;
     }
 }
