@@ -181,6 +181,7 @@
     <Content Include="src\home\home.aspx" />
     <Content Include="src\home\trangchu.css" />
     <Content Include="src\Thanhtoan\Thanhtoan.aspx" />
+    <Content Include="src\trangchu admin\dathang.css" />
     <Content Include="src\trangchu admin\admin.css" />
     <Content Include="src\trangchu admin\lienhe.aspx" />
     <Content Include="src\trangchu admin\sanpham.aspx" />
