@@ -57,11 +57,12 @@ namespace doan.src.Liên_Hệ
                     //Chuỗi kết nối từ Web.Config
                     string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                     using (SqlConnection conn = new SqlConnection(connStr))
-                        try
+                    
+                    try
                         {
-
+                            
                             {
-                                string sql = @"INSERT INTO lienhe (HoTen, Email, DienThoai, MoTa, DiaChi,MaND) VALUES(@HoTen, @Email, @DienThoai, @MoTa, @Diachi, @MaND)";
+                                string sql = @"INSERT INTO lienhe (HoTen, Email, DienThoai, MoTa, DiaChi,MaND, UserName, NgayGui) VALUES(@HoTen, @Email, @DienThoai, @MoTa, @Diachi, @MaND, @UserName, @NgayGui)";
                                 SqlCommand cmd = new SqlCommand(sql, conn);
                                 cmd.Parameters.AddWithValue("@HoTen", hoTen);
                                 cmd.Parameters.AddWithValue("@Email", Email);
@@ -69,8 +70,15 @@ namespace doan.src.Liên_Hệ
                                 cmd.Parameters.AddWithValue("@MoTa", Noidung);
                                 cmd.Parameters.AddWithValue("@Diachi", Diachi);
                                 cmd.Parameters.AddWithValue("@MaND", 2);
+                                
 
-
+                                string userName = "Khách";
+                                if (Session["UserName"] != null)
+                                {
+                                    userName = Session["UserName"].ToString();
+                                }
+                                cmd.Parameters.AddWithValue("@UserName", userName);
+                                cmd.Parameters.AddWithValue("@NgayGui", DateTime.Now);
                                 conn.Open();
                                 cmd.ExecuteNonQuery();
                                 conn.Close();

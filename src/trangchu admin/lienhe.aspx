@@ -1,122 +1,202 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/src/trangchu admin/admin.Master" AutoEventWireup="true" CodeBehind="lienhe.aspx.cs" Inherits="doan.src.trangchu_admin.lienhe" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-         body {
-            font-family: Arial;
-            background-color: lightblue;
-            padding: 20px;
-        }
+    .search-container {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background-color: #f7f7f8;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    align-items: center;
+    }
 
-        h2 {
-            color: navy;
-        }
+    .form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    flex-shrink: 0;
+    }
 
-        .form-group {
-            margin-bottom: 10px;
-        }
+    .table {
+    border-collapse: separate !important;
+    border-spacing: 0 8px;
+    width: 100%;
+    border: none !important;
+    background: #fff;
+    }
 
-        label {
-            display: block;
-            font-weight: bold;
-            color: black;
-        }
+    .table th, .table td {
+        border: none !important;
+        padding: 12px 16px;
+        vertical-align: middle;
+    }
 
-        input[type="text"], textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid gray;
-            border-radius: 4px;
-        }
+    .table th {
+        background: #f7f7f8;
+        font-weight: 600;
+    }
 
-        .btn {
-            background-color: green;
-            color: white;
-            padding: 8px 15px;
-            margin-right: 5px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+    .table td {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        border-radius: 6px;
+    }
 
-        .btn-danger {
-            background-color: red;
-        }
+    .gv-pagination {
+    margin-top: 20px;
+    text-align: center;
+    }
 
-        .search-bar {
-            margin-bottom: 15px;
-        }
+    .gv-pagination a, .gv-pagination span {
+        margin: 0 4px;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #333;
+    }
 
-        .grid {
-            margin-top: 20px;
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+    .gv-pagination .aspNetDisabled {
+        color: #999;
+        pointer-events: none;
+    }
 
-        .message {
-            margin-top: 10px;
-            font-weight: bold;
-        }
+    .btn {
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    }
+
+    .btn-success {
+    background-color: #28a745 !important;
+    border: none !important;
+    }
+
+    .btn-primary {
+    background-color: #32CD32 !important;
+    border: none !important;
+    }
+
+    .btn-secondary {
+    background-color: #32CD32 !important;
+    border: none !important;
+    }
+
+    .form-control {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    }
+
+    /* Label thông báo */
+    .message-label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <h2>Quản lý Liên hệ</h2>
-
-        <div class="form-group">
-            <asp:Label ID="lblHoTen" runat="server" />
-            <asp:TextBox ID="txtHoTen" runat="server" />
-        </div>
-        <div class="form-group">
-            <asp:Label ID="lblEmail" runat="server" />
-            <asp:TextBox ID="txtEmail" runat="server" />
-        </div>
-        <div class="form-group">
-            <asp:Label ID="lblSDT" runat="server" />
-            <asp:TextBox ID="txtSDT" runat="server" />
-        </div>
-        <div class="form-group">
-            <asp:Label ID="lblDiaChi" runat="server" />
-            <asp:TextBox ID="txtDiaChi" runat="server" />
-        </div>
-        <div class="form-group">
-            <asp:Label ID="lblNoiDung" runat="server" />
-            <asp:TextBox ID="txtMoTa" runat="server" TextMode="MultiLine" Rows="3" />
-        </div>
-
-        <div class="form-container">
-        <asp:HiddenField ID="hdID" runat="server" />
-        <div class="form-group">
-        <asp:Button ID="btnThem" runat="server" CssClass="btn" Text="Thêm" OnClick="btnThem_Click" />
-        <asp:Button ID="btnSua" runat="server" CssClass="btn" Text="Sửa" OnClick="btnSua_Click" />
-        <asp:Button ID="btnXoa" runat="server" CssClass="btn btn-danger" Text="Xóa" OnClick="btnXoa_Click" />
-        </div>
-            </div>
-
-        <div class="search-bar">
-            <asp:TextBox ID="txtTimKiem" runat="server" Placeholder="Tìm theo họ tên..." />
-            <asp:Button ID="btnTim" runat="server" CssClass="btn" Text="Tìm" OnClick="btnTim_Click" />
-        </div>
-
-        <asp:Label ID="lblMessage" runat="server" CssClass="message" />
-
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
-            DataKeyNames="MaLH" CssClass="grid"
-            OnRowEditing="GridView1_RowEditing"
-            OnRowCancelingEdit="GridView1_RowCancelingEdit"
-            OnRowUpdating="GridView1_RowUpdating"
-            OnRowDeleting="GridView1_RowDeleting">
-            <Columns>
-                <asp:BoundField DataField="MaLH" HeaderText="Mã" ReadOnly="True" />
-                <asp:BoundField DataField="HoTen" HeaderText="Họ tên" />
-                <asp:BoundField DataField="Email" HeaderText="Email" />
-                <asp:BoundField DataField="DienThoai" HeaderText="SĐT" />
-                <asp:BoundField DataField="DiaChi" HeaderText="Địa chỉ" />
-                <asp:BoundField DataField="MoTa" HeaderText="Mô tả" />
-                <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
-            </Columns>
-        </asp:GridView>
-
-        <asp:Literal ID="Literal1" runat="server" />
+   
+    <h2 class="header"></h2>
     
+   <!-- Cột trái: Bảng liên hệ -->
+<div style="flex: 1;">
+    <%--<!-- Thanh tìm kiếm nằm trong bảng -->--%>
+    <div class="search-container" style="margin-bottom: 10px;">
+        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control search-box" Placeholder="🔍 Tìm theo họ tên hoặc email hoặc user..." />
+        <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" CssClass="btn btn-primary search-button" OnClick="btnSearch_Click" />
+        <asp:Button ID="btnReset" runat="server" Text="Làm mới" CssClass="btn btn-secondary" OnClick="btnReset_Click" />
+    </div>
+
+    <asp:GridView ID="gvLienHe" runat="server" AutoGenerateColumns="False" DataKeyNames="MaLH"
+        CssClass="table" AllowPaging="true" PageSize="10"
+        PagerSettings-Mode="Numeric" PagerStyle-CssClass="gv-pagination"
+        OnRowEditing="gvLienHe_RowEditing"
+        OnRowUpdating="gvLienHe_RowUpdating"
+        OnRowCancelingEdit="gvLienHe_RowCancelingEdit"
+        OnRowDeleting="gvLienHe_RowDeleting"
+        OnPageIndexChanging="gvLienHe_PageIndexChanging">
+    <Columns>
+        <asp:TemplateField HeaderText="Họ tên">
+            <ItemTemplate>
+                <%# Eval("HoTen") %>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="txtHoTen" runat="server" Text='<%# Bind("HoTen") %>' CssClass="form-control" />
+            </EditItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Email">
+            <ItemTemplate>
+                <%# Eval("Email") %>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="txtEmail" runat="server" Text='<%# Bind("Email") %>' CssClass="form-control" />
+            </EditItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="SĐT">
+            <ItemTemplate>
+                <%# Eval("DienThoai") %>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="txtSDT" runat="server" Text='<%# Bind("DienThoai") %>' CssClass="form-control" />
+            </EditItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Địa chỉ">
+            <ItemTemplate>
+                <%# Eval("DiaChi") %>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="txtDiaChi" runat="server" Text='<%# Bind("DiaChi") %>' CssClass="form-control" />
+            </EditItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Nội dung">
+            <ItemTemplate>
+                <%# Eval("MoTa") %>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="txtNoiDung" runat="server" Text='<%# Bind("MoTa") %>' CssClass="form-control" TextMode="MultiLine" Rows="2" />
+                </EditItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="User">
+            <ItemTemplate>
+                <%# Eval("UserName") %>
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:TextBox ID="txtUserName" runat="server" Text='<%# Bind("UserName") %>' CssClass="form-control" />
+            </EditItemTemplate>
+        </asp:TemplateField>
+                <asp:BoundField DataField="NgayGui" HeaderText="Ngày gửi" ReadOnly="True" DataFormatString="{0:dd/MM/yyyy HH:mm}" />
+                <asp:CommandField ShowEditButton="true" EditText="✏️ Sửa" UpdateText="💾 Lưu" CancelText="❌ Hủy" />
+                <asp:CommandField ShowDeleteButton="true" DeleteText="🗑️ Xóa" />
+     </Columns>
+     </asp:GridView>
+</div>
+
+       <div class="form-container">
+        <h3 style="margin-top: 0;">Thêm liên hệ mới</h3>
+        <asp:Panel ID="pnlAdd" runat="server">
+            <asp:TextBox ID="txtHoTen" runat="server" Placeholder="Họ tên" CssClass="form-control" /><br />
+            <asp:TextBox ID="txtEmail" runat="server" Placeholder="Email" CssClass="form-control" /><br />
+            <asp:TextBox ID="txtSDT" runat="server" Placeholder="Số điện thoại" CssClass="form-control" /><br />
+            <asp:TextBox ID="txtDiaChi" runat="server" Placeholder="Địa chỉ" CssClass="form-control" /><br />
+            <asp:TextBox ID="txtNoiDung" runat="server" Placeholder="Nội dung" CssClass="form-control" TextMode="MultiLine" Rows="3" /><br />
+            <asp:TextBox ID="txtUserName" runat="server" Placeholder="UserName (nếu có)" CssClass="form-control" /><br />
+            <asp:Button ID="btnThem" runat="server" Text="Thêm mới" CssClass="btn btn-success" OnClick="btnThem_Click" />
+        </asp:Panel>
+        <asp:Label ID="lblMessage" runat="server" CssClass="message-label" />
+    </div>
 </asp:Content>
+
 
