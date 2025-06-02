@@ -9,7 +9,7 @@
         body {
             font-family:Arial, Helvetica, sans-serif;
             background-color: #f0f0f0;
-            
+           
         }
         .name{
             
@@ -70,7 +70,9 @@
            font-size: 16px;
         }
         .cart-details div {
-         margin: 8px 0;
+      
+         padding: 6px 10px;       
+        
         }
         .cart-details button {
          background-color: #fff;
@@ -99,6 +101,7 @@
         height: auto;
         margin-right: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -132,10 +135,6 @@
         </div>
         </ItemTemplate>
         </asp:Repeater>
-        <div class="content">
-            <asp:Label ID="lblMessage" runat="server" Text="Không có thông tin giỏ hàng"></asp:Label>
-        </div>
-
         <div class="total">
             <asp:Label ID="lblTotal" runat="server"></asp:Label>
         </div>

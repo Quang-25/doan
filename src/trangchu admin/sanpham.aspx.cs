@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -16,27 +17,86 @@ namespace doan.src.trangchu_admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.ContentEncoding = System.Text.Encoding.UTF8;
+            Response.Charset = "utf-8";
             if (!IsPostBack)
             {
+                // Register AJAX script for async updates
+                ScriptManager.RegisterStartupScript(this, GetType(), "RegisterAsyncPostBackControl",
+                    "Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function() { $('.modal').modal('hide'); });", true);
+
+                LoadProductCategories();
                 LoadProducts();
             }
         }
 
-        private void LoadProducts(string searchTerm = "")
+        private void LoadProductCategories()
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = "SELECT * FROM SanPham";
+                string sql = "SELECT DISTINCT LoaiSP FROM SanPham ORDER BY LoaiSP";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string category = reader["LoaiSP"].ToString();
+                        ddlLoaiSP.Items.Add(new ListItem(category, category));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ShowMessage("Lỗi khi tải danh mục: " + ex.Message, false);
+                }
+            }
+        }
+
+        private void LoadProducts(string searchTerm = "", string categoryFilter = "", string statusFilter = "")
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = "SELECT * FROM SanPham WHERE 1=1";
+
+                // Apply search filter
                 if (!string.IsNullOrEmpty(searchTerm))
                 {
-                    sql += " WHERE TenSP LIKE @SearchTerm OR LoaiSP LIKE @SearchTerm";
+                    sql += " AND (TenSP LIKE @SearchTerm OR LoaiSP LIKE @SearchTerm)";
                 }
+
+                // Apply category filter
+                if (!string.IsNullOrEmpty(categoryFilter))
+                {
+                    sql += " AND LoaiSP = @CategoryFilter";
+                }
+
+                // Apply status filter
+                if (!string.IsNullOrEmpty(statusFilter))
+                {
+                    sql += " AND TinhTrang = @StatusFilter";
+                }
+
                 sql += " ORDER BY NgayTao DESC";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
+
+                // Add parameters
                 if (!string.IsNullOrEmpty(searchTerm))
                 {
                     cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
+                }
+
+                if (!string.IsNullOrEmpty(categoryFilter))
+                {
+                    cmd.Parameters.AddWithValue("@CategoryFilter", categoryFilter);
+                }
+
+                if (!string.IsNullOrEmpty(statusFilter))
+                {
+                    cmd.Parameters.AddWithValue("@StatusFilter", statusFilter);
                 }
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -51,7 +111,7 @@ namespace doan.src.trangchu_admin
                 }
                 catch (Exception ex)
                 {
-                    ShowMessage("Lỗi: " + ex.Message, false);
+                    ShowMessage("Lỗi khi tải sản phẩm: " + ex.Message, false);
                 }
             }
         }
@@ -59,7 +119,52 @@ namespace doan.src.trangchu_admin
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             string searchTerm = txtSearch.Text.Trim();
-            LoadProducts(searchTerm);
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+
+            // Reset to first page when searching
+            gvSanPham.PageIndex = 0;
+
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
+        }
+
+        protected void ddlLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+
+            // Reset to first page when filtering
+            gvSanPham.PageIndex = 0;
+
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
+        }
+
+        protected void ddlTinhTrangLoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+
+            // Reset to first page when filtering
+            gvSanPham.PageIndex = 0;
+
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
+        }
+
+        protected void ddlPageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int pageSize = Convert.ToInt32(ddlPageSize.SelectedValue);
+            gvSanPham.PageSize = pageSize;
+
+            // Reset to first page when changing page size
+            gvSanPham.PageIndex = 0;
+
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
         }
 
         protected void btnAddProduct_Click(object sender, EventArgs e)
@@ -120,7 +225,12 @@ namespace doan.src.trangchu_admin
                         cmd.ExecuteNonQuery();
                         ShowMessage("✅ Thêm sản phẩm thành công!", true);
                         ClearForm();
-                        LoadProducts();
+
+                        // Reload with current filters
+                        string searchTerm = txtSearch.Text.Trim();
+                        string categoryFilter = ddlLoaiSP.SelectedValue;
+                        string statusFilter = ddlTinhTrangLoc.SelectedValue;
+                        LoadProducts(searchTerm, categoryFilter, statusFilter);
 
                         // Reset modal by JavaScript
                         ScriptManager.RegisterStartupScript(this, GetType(), "hideModal",
@@ -152,10 +262,10 @@ namespace doan.src.trangchu_admin
 
         protected void gvSanPham_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "ViewDetails")
+            if (e.CommandName == "ViewDetails" || e.CommandName == "EditModal" || e.CommandName == "DeleteModal")
             {
                 int productId = Convert.ToInt32(e.CommandArgument);
-                // Show product details in a modal via Javascript
+
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     string sql = "SELECT * FROM SanPham WHERE MaSP = @MaSP";
@@ -170,28 +280,98 @@ namespace doan.src.trangchu_admin
                         {
                             string tenSP = reader["TenSP"].ToString();
                             string moTa = reader["MoTa"].ToString();
-                            string hinhAnh = reader["HinhAnhChinh"].ToString();
+                            string hinhAnhChinh = reader["HinhAnhChinh"].ToString();
+                            string hinhAnhPhu = reader["HinhAnhPhu"] != DBNull.Value ? reader["HinhAnhPhu"].ToString() : string.Empty;
+                            string hinhAnhPhu2 = reader["HinhAnhPhu2"] != DBNull.Value ? reader["HinhAnhPhu2"].ToString() : string.Empty;
+                            string loaiSP = reader["LoaiSP"].ToString();
+                            string tinhTrang = reader["TinhTrang"].ToString();
+                            string xuatXu = reader["XuatXu"] != DBNull.Value ? reader["XuatXu"].ToString() : string.Empty;
+                            double gia = Convert.ToDouble(reader["Gia"]);
+                            int tongSoLuong = Convert.ToInt32(reader["TongSoLuong"]);
+                            int soLuongBan = Convert.ToInt32(reader["SoLuongBan"]);
+                            string khuyenMai = reader["KhuyenMai"] != DBNull.Value ? reader["KhuyenMai"].ToString() : string.Empty;
 
-                            // Format the detailed information with HTML
-                            string detailsHtml = $@"
-                                <div class='card'>
-                                    <div class='card-body'>
-                                        <h5 class='card-title'>{tenSP}</h5>
-                                        <img src='{hinhAnh}' class='img-fluid mb-3' style='max-height: 200px;'>
-                                        <p><strong>Mô tả:</strong> {moTa}</p>
-                                    </div>
-                                </div>";
+                            if (e.CommandName == "ViewDetails")
+                            {
+                                // Format the detailed information with HTML
+                                string giaHienThi = khuyenMai != string.Empty ?
+                                    $"{gia * (1 - Convert.ToDouble(khuyenMai) / 100):N0}đ <del>{gia:N0}đ</del> (-{khuyenMai}%)" :
+                                    $"{gia:N0}đ";
 
-                            // Display details in a Bootstrap modal using JavaScript
-                            string script = $@"
-                                var detailsModal = new bootstrap.Modal(document.getElementById('productDetailsModal'), {{
-                                    keyboard: false
-                                }});
-                                document.getElementById('modalProductDetails').innerHTML = `{detailsHtml}`;
-                                detailsModal.show();";
+                                string detailsHtml = $@"
+                                    <div class='row'>
+                                        <div class='col-md-5'>
+                                            <img src='{hinhAnhChinh}' class='img-fluid mb-3' alt='{tenSP}'>
+                                            <div class='row'>
+                                                {(!string.IsNullOrEmpty(hinhAnhPhu) ? $@"<div class='col-6'><img src='{hinhAnhPhu}' class='img-thumbnail' alt='Hình ảnh phụ 1'></div>" : "")}
+                                                {(!string.IsNullOrEmpty(hinhAnhPhu2) ? $@"<div class='col-6'><img src='{hinhAnhPhu2}' class='img-thumbnail' alt='Hình ảnh phụ 2'></div>" : "")}
+                                            </div>
+                                        </div>
+                                        <div class='col-md-7'>
+                                            <h4 class='mb-3'>{tenSP}</h4>
+                                            <p class='fs-5 fw-bold text-primary'>{giaHienThi}</p>
+                                            <div class='mb-3'>
+                                                <span class='badge bg-secondary'>{loaiSP}</span>
+                                                <span class='badge {(tinhTrang == "Còn hàng" ? "bg-success" : "bg-danger")}'>{tinhTrang}</span>
+                                                {(!string.IsNullOrEmpty(xuatXu) ? $@"<span class='badge bg-info'>Xuất xứ: {xuatXu}</span>" : "")}
+                                            </div>
+                                            <div class='mb-3'>
+                                                <p><strong>Tổng số lượng:</strong> {tongSoLuong + soLuongBan}</p>
+                                                <p><strong>Số lượng đã bán:</strong> {soLuongBan}</p>
+                                                <p><strong>Tồn kho:</strong> {tongSoLuong}</p>
+                                            </div>
+                                            <div class='mb-3'>
+                                                <h5>Mô tả:</h5>
+                                                <p>{moTa}</p>
+                                            </div>
+                                        </div>
+                                    </div>";
 
-                            // Register the script
-                            ScriptManager.RegisterStartupScript(this, GetType(), "showDetailsModal", script, true);
+                                // Display details in a Bootstrap modal using JavaScript
+                                string script = $@"
+                                    document.getElementById('modalProductDetails').innerHTML = `{detailsHtml}`;
+                                    var detailsModal = new bootstrap.Modal(document.getElementById('productDetailsModal'));
+                                    detailsModal.show();";
+
+                                // Register the script
+                                ScriptManager.RegisterStartupScript(this, GetType(), "showDetailsModal", script, true);
+                            }
+                            else if (e.CommandName == "EditModal")
+                            {
+                                // Fill edit modal with product data
+                                hdnProductId.Value = productId.ToString();
+                                txtTenSPEdit.Text = tenSP;
+                                txtGiaEdit.Text = gia.ToString();
+                                txtKhuyenMaiEdit.Text = khuyenMai;
+                                txtTongSoLuongEdit.Text = tongSoLuong.ToString();
+                                txtSoLuongBanEdit.Text = soLuongBan.ToString();
+                                txtLoaiSPEdit.Text = loaiSP;
+                                txtXuatXuEdit.Text = xuatXu;
+                                ddlTinhTrangEdit.SelectedValue = tinhTrang;
+                                txtHinhAnhChinhEdit.Text = hinhAnhChinh;
+                                txtHinhAnhPhuEdit.Text = hinhAnhPhu;
+                                txtHinhAnhPhu2Edit.Text = hinhAnhPhu2;
+                                txtMoTaEdit.Text = moTa;
+
+                                // Set image previews
+                                imgHinhAnhChinhEditPreview.Src = hinhAnhChinh;
+                                imgHinhAnhPhuEditPreview.Src = hinhAnhPhu;
+                                imgHinhAnhPhu2EditPreview.Src = hinhAnhPhu2;
+
+                                // Show edit modal
+                                ScriptManager.RegisterStartupScript(this, GetType(), "showEditModal",
+                                    "var editModal = new bootstrap.Modal(document.getElementById('editProductModal')); editModal.show();", true);
+                            }
+                            else if (e.CommandName == "DeleteModal")
+                            {
+                                // Set delete confirmation values
+                                hdnDeleteProductId.Value = productId.ToString();
+                                spnDeleteProductName.InnerText = tenSP;
+
+                                // Show delete confirmation modal
+                                ScriptManager.RegisterStartupScript(this, GetType(), "showDeleteModal",
+                                    "var deleteModal = new bootstrap.Modal(document.getElementById('deleteProductModal')); deleteModal.show();", true);
+                            }
                         }
                         reader.Close();
                     }
@@ -206,13 +386,19 @@ namespace doan.src.trangchu_admin
         protected void gvSanPham_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gvSanPham.EditIndex = e.NewEditIndex;
-            LoadProducts(txtSearch.Text.Trim());
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
         }
 
         protected void gvSanPham_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gvSanPham.EditIndex = -1;
-            LoadProducts(txtSearch.Text.Trim());
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
         }
 
         protected void gvSanPham_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -287,7 +473,10 @@ namespace doan.src.trangchu_admin
             }
 
             gvSanPham.EditIndex = -1;
-            LoadProducts(txtSearch.Text.Trim());
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
         }
 
         protected void gvSanPham_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -312,13 +501,149 @@ namespace doan.src.trangchu_admin
                 }
             }
 
-            LoadProducts(txtSearch.Text.Trim());
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
         }
 
         protected void gvSanPham_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvSanPham.PageIndex = e.NewPageIndex;
-            LoadProducts(txtSearch.Text.Trim());
+
+            string searchTerm = txtSearch.Text.Trim();
+            string categoryFilter = ddlLoaiSP.SelectedValue;
+            string statusFilter = ddlTinhTrangLoc.SelectedValue;
+
+            LoadProducts(searchTerm, categoryFilter, statusFilter);
+        }
+
+        protected void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                int productId;
+                if (!int.TryParse(hdnProductId.Value, out productId))
+                {
+                    ShowMessage("❌ Lỗi: ID sản phẩm không hợp lệ.", false);
+                    return;
+                }
+
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string sql = @"UPDATE SanPham 
+                                  SET TenSP = @TenSP, 
+                                      Gia = @Gia, 
+                                      KhuyenMai = @KhuyenMai, 
+                                      TongSoLuong = @TongSoLuong, 
+                                      SoLuongBan = @SoLuongBan, 
+                                      LoaiSP = @LoaiSP, 
+                                      XuatXu = @XuatXu,
+                                      TinhTrang = @TinhTrang,
+                                      HinhAnhChinh = @HinhAnhChinh,
+                                      HinhAnhPhu = @HinhAnhPhu,
+                                      HinhAnhPhu2 = @HinhAnhPhu2,
+                                      MoTa = @MoTa
+                                  WHERE MaSP = @MaSP";
+
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@MaSP", productId);
+                    cmd.Parameters.AddWithValue("@TenSP", txtTenSPEdit.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Gia", Convert.ToDouble(txtGiaEdit.Text.Trim()));
+
+                    if (string.IsNullOrEmpty(txtKhuyenMaiEdit.Text.Trim()))
+                        cmd.Parameters.AddWithValue("@KhuyenMai", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@KhuyenMai", Convert.ToInt32(txtKhuyenMaiEdit.Text.Trim()));
+
+                    cmd.Parameters.AddWithValue("@TongSoLuong", Convert.ToInt32(txtTongSoLuongEdit.Text.Trim()));
+                    cmd.Parameters.AddWithValue("@SoLuongBan", Convert.ToInt32(txtSoLuongBanEdit.Text.Trim()));
+                    cmd.Parameters.AddWithValue("@LoaiSP", txtLoaiSPEdit.Text.Trim());
+
+                    if (string.IsNullOrEmpty(txtXuatXuEdit.Text.Trim()))
+                        cmd.Parameters.AddWithValue("@XuatXu", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@XuatXu", txtXuatXuEdit.Text.Trim());
+
+                    cmd.Parameters.AddWithValue("@TinhTrang", ddlTinhTrangEdit.SelectedValue);
+                    cmd.Parameters.AddWithValue("@HinhAnhChinh", txtHinhAnhChinhEdit.Text.Trim());
+
+                    if (string.IsNullOrEmpty(txtHinhAnhPhuEdit.Text.Trim()))
+                        cmd.Parameters.AddWithValue("@HinhAnhPhu", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@HinhAnhPhu", txtHinhAnhPhuEdit.Text.Trim());
+
+                    if (string.IsNullOrEmpty(txtHinhAnhPhu2Edit.Text.Trim()))
+                        cmd.Parameters.AddWithValue("@HinhAnhPhu2", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@HinhAnhPhu2", txtHinhAnhPhu2Edit.Text.Trim());
+
+                    cmd.Parameters.AddWithValue("@MoTa", txtMoTaEdit.Text.Trim());
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        ShowMessage("✅ Cập nhật sản phẩm thành công!", true);
+
+                        // Reload the products
+                        string searchTerm = txtSearch.Text.Trim();
+                        string categoryFilter = ddlLoaiSP.SelectedValue;
+                        string statusFilter = ddlTinhTrangLoc.SelectedValue;
+                        LoadProducts(searchTerm, categoryFilter, statusFilter);
+
+                        // Hide modal
+                        ScriptManager.RegisterStartupScript(this, GetType(), "hideEditModal",
+                            "$('#editProductModal').modal('hide');", true);
+                    }
+                    catch (Exception ex)
+                    {
+                        ShowMessage("❌ Lỗi: " + ex.Message, false);
+                    }
+                }
+            }
+        }
+
+        protected void btnConfirmDelete_Click(object sender, EventArgs e)
+        {
+            int productId;
+            if (!int.TryParse(hdnDeleteProductId.Value, out productId))
+            {
+                ShowMessage("❌ Lỗi: ID sản phẩm không hợp lệ.", false);
+                return;
+            }
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = "DELETE FROM SanPham WHERE MaSP = @MaSP";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@MaSP", productId);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    ShowMessage("✅ Xóa sản phẩm thành công!", true);
+
+                    // Reload the products
+                    string searchTerm = txtSearch.Text.Trim();
+                    string categoryFilter = ddlLoaiSP.SelectedValue;
+                    string statusFilter = ddlTinhTrangLoc.SelectedValue;
+                    LoadProducts(searchTerm, categoryFilter, statusFilter);
+
+                    // Hide modal
+                    ScriptManager.RegisterStartupScript(this, GetType(), "hideDeleteModal",
+                        "$('#deleteProductModal').modal('hide');", true);
+                }
+                catch (Exception ex)
+                {
+                    ShowMessage("❌ Lỗi: " + ex.Message + " Sản phẩm này có thể đã được đặt hàng, không thể xóa.", false);
+
+                    // Hide modal
+                    ScriptManager.RegisterStartupScript(this, GetType(), "hideDeleteModal",
+                        "$('#deleteProductModal').modal('hide');", true);
+                }
+            }
         }
 
         protected void gvSanPham_RowDataBound(object sender, GridViewRowEventArgs e)

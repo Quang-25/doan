@@ -1,8 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rinva\\source\\repos\\web_nang_cao_nhom\\",
+  "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\doan\\",
   "Documents": [
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan\\src\\home\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
 <<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\84899\\source\\repos\\doan\\src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
@@ -66,6 +74,7 @@
       "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\web_nang_cao_nhom\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
 >>>>>>> a19d5b16aa520803a057cbb4f7382e2b1ce181f3
+>>>>>>> 571e2109169b462c32bb507b0dc6375282aeb1d9
     }
   ],
   "DocumentGroupContainers": [
@@ -76,10 +85,14 @@
         {
           "DockedWidth": 200,
 <<<<<<< HEAD
+          "SelectedChildIndex": 3,
+=======
+<<<<<<< HEAD
           "SelectedChildIndex": 5,
 =======
           "SelectedChildIndex": 6,
 >>>>>>> a19d5b16aa520803a057cbb4f7382e2b1ce181f3
+>>>>>>> 571e2109169b462c32bb507b0dc6375282aeb1d9
           "Children": [
             {
               "$type": "Bookmark",
@@ -95,6 +108,17 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 0,
+              "Title": "home.aspx",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan\\src\\home\\home.aspx",
+              "RelativeDocumentMoniker": "src\\home\\home.aspx",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan\\src\\home\\home.aspx",
+              "RelativeToolTip": "src\\home\\home.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T17:18:41.714Z",
+=======
 <<<<<<< HEAD
               "DocumentIndex": 3,
               "Title": "LienHe.aspx.cs",
@@ -141,11 +165,22 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T18:20:29.708Z",
 >>>>>>> a19d5b16aa520803a057cbb4f7382e2b1ce181f3
+>>>>>>> 571e2109169b462c32bb507b0dc6375282aeb1d9
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
+              "Title": "home.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan\\src\\home\\home.aspx.cs",
+              "RelativeDocumentMoniker": "src\\home\\home.aspx.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan\\src\\home\\home.aspx.cs",
+              "RelativeToolTip": "src\\home\\home.aspx.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:50:05.638Z",
+=======
 <<<<<<< HEAD
               "Title": "lienhe.aspx.cs",
               "DocumentMoniker": "C:\\Users\\84899\\source\\repos\\doan\\src\\trangchu admin\\lienhe.aspx.cs",
@@ -277,6 +312,7 @@
 >>>>>>> a19d5b16aa520803a057cbb4f7382e2b1ce181f3
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-06-01T18:11:41.367Z",
+>>>>>>> 571e2109169b462c32bb507b0dc6375282aeb1d9
               "EditorCaption": ""
             },
             {
