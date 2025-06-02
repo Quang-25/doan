@@ -1,5 +1,229 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/src/trangchu admin/admin.Master" AutoEventWireup="true" CodeBehind="KhachHang.aspx.cs" Inherits="doan.src.trangchu_admin.WebForm4" %>
+﻿<%@ Page Title="Quản lý Khách Hàng" Language="C#" MasterPageFile="~/src/trangchu admin/admin.Master" AutoEventWireup="true" CodeBehind="KhachHang.aspx.cs" Inherits="doan.src.trangchu_admin.KhachHang" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f4f8;
+            padding: 30px;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 300px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 18px;
+            margin-left: 8px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #b02a37;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .grid {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .gridview {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .gridview th {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .gridview td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .gridview tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .gridview tr:hover {
+            background-color: #eef;
+        }
+
+        .form-panel {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+
+    <div class="search-bar">
+        <asp:TextBox ID="txtTimKiem" runat="server" Placeholder="Tìm theo họ tên" />
+        <asp:Button ID="btnTimKiem" runat="server" Text="Tìm kiếm" OnClick="btnTimKiem_Click" CssClass="btn" />
+        <asp:Button ID="btnThemMoi" runat="server" Text="Thêm mới" OnClick="btnThemMoi_Click" CssClass="btn" />
+    </div>
+
+    <asp:Panel ID="pnlThemMoi" runat="server" Visible="false" Style="background:#eef; padding:10px; margin-bottom:15px; border-radius:5px;">
+        <h3>Thêm khách hàng mới</h3>
+<div class="form-group">
+    <label>Họ tên</label>
+    <asp:TextBox ID="txtTenMoi" runat="server" CssClass="form-control" />
+</div>
+<div class="form-group">
+    <label>Địa chỉ</label>
+    <asp:TextBox ID="txtDiaChiMoi" runat="server" CssClass="form-control" />
+</div>
+<div class="form-group">
+    <label>Điện thoại</label>
+    <asp:TextBox ID="txtSdtMoi" runat="server" CssClass="form-control" />
+</div>
+<div class="form-group">
+    <label>Email</label>
+    <asp:TextBox ID="txtEmailMoi" runat="server" CssClass="form-control" />
+</div>
+<div class="form-group">
+    <label>Chức vụ</label>
+    <asp:TextBox ID="txtChucVuMoi" runat="server" CssClass="form-control" />
+</div>
+<div class="form-group">
+    <label>Số dư</label>
+    <asp:TextBox ID="txtSoDuMoi" runat="server" CssClass="form-control" />
+</div>
+<div class="form-group">
+    <label>Mật khẩu</label>
+    <asp:TextBox ID="txtMatKhauMoi" runat="server" TextMode="Password" CssClass="form-control" />
+</div>
+<asp:Button ID="btnLuuMoi" runat="server" Text="Lưu" OnClick="btnLuuMoi_Click" CssClass="btn" />
+<asp:Button ID="btnHuy" runat="server" Text="Hủy" CssClass="btn btn-danger" OnClick="btnHuy_Click" />
+        <asp:Label ID="lblMessage" runat="server" ></asp:Label>
+
+
+    </asp:Panel>
+
+    <div class="grid">
+        <asp:GridView ID="gvKhachHang" runat="server" AutoGenerateColumns="False"
+            DataKeyNames="MaND"
+            AutoGenerateEditButton="True" AutoGenerateDeleteButton="True"
+            OnRowEditing="gvKhachHang_RowEditing"
+            OnRowUpdating="gvKhachHang_RowUpdating"
+            OnRowCancelingEdit="gvKhachHang_RowCancelingEdit"
+            OnRowDeleting="gvKhachHang_RowDeleting"
+            CssClass="gridview"
+            Width="100%">
+
+            <Columns>
+                <asp:BoundField DataField="MaND" HeaderText="Mã ND" ReadOnly="True" />
+
+                <asp:TemplateField HeaderText="Họ tên">
+                    <ItemTemplate><%# Eval("TenND") %></ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtTenND" runat="server" Text='<%# Bind("TenND") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Địa chỉ">
+                    <ItemTemplate><%# Eval("DiaChi") %></ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtDiaChi" runat="server" Text='<%# Bind("DiaChi") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Điện thoại">
+                    <ItemTemplate><%# Eval("Sdt") %></ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtSdt" runat="server" Text='<%# Bind("Sdt") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Email">
+                    <ItemTemplate><%# Eval("Email") %></ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtEmail" runat="server" Text='<%# Bind("Email") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Chức vụ">
+                    <ItemTemplate><%# Eval("ChucVu") %></ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtChucVu" runat="server" Text='<%# Bind("ChucVu") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Số dư">
+                    <ItemTemplate><%# Eval("SoDu") %></ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtSoDu" runat="server" Text='<%# Bind("SoDu") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>

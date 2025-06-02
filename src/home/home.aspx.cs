@@ -19,15 +19,31 @@ namespace doan.src.home
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
             if (!IsPostBack)
             {
+                string userId = GetUserIdFromCookie();
+                if (userId == null)
+                {
+                    Response.Redirect("/src/dangkydangnhap/login");
+                    return;
+                }
                 pageload();
             }
 
             
            
 
+        }
+        private string GetUserIdFromCookie()
+        {
+            if (Session["idUser"] != null)
+            {
+                return Session["idUser"].ToString();
+            }
+            
+            return null;
         }
         public void pageload()
         {
@@ -99,10 +115,11 @@ namespace doan.src.home
             string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connStr))
             {
+                string userId = GetUserIdFromCookie();
                 string query = @"INSERT INTO DonHang (Soluong,MaND,MaSP) VALUES (@soluong,@idND,@idSp)";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@soluong", 1);
-                cmd.Parameters.AddWithValue("@idND", 1);
+                cmd.Parameters.AddWithValue("@idND", userId);
                 cmd.Parameters.AddWithValue("@idSp", e.CommandArgument.ToString());
                 conn.Open();
                 cmd.ExecuteNonQuery();

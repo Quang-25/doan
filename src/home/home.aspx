@@ -81,7 +81,7 @@
                     </li>
                     <li><a class="titleMenu" href="#">Tin Tức</a></li>
                     <li><a class="titleMenu" href="#">Thư Viện</a></li>
-                    <li><a class="titleMenu" href="#">Liên hệ</a></li>
+                    <li><a class="titleMenu" href="/src/Liên%20Hệ/LienHe">Liên hệ</a></li>
                     <li>
                         <div class="search">
                              <asp:TextBox ID="txtSearch" runat="server" CssClass="search-for" Placeholder="Nhap tu khoa..." ></asp:TextBox>

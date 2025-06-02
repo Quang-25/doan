@@ -1,0 +1,162 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fefefe url("https://demo037102.web30s.vn/datafiles/34058/upload/images/banner/slide2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+#ContentPlaceHolder1 {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.Donhang {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffe5e5; /* hồng nhạt */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .Donhang th {
+        background-color: #f8d7da;
+        color: #2c3e50;
+        padding: 12px;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .Donhang td {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        vertical-align: middle;
+        word-wrap: break-word;
+    }
+
+    .Donhang tr:nth-child(even) {
+        background-color: #ffeaea;
+    }
+
+    .Donhang .aspNetTextBox, .Donhang input[type="text"] {
+        padding: 5px;
+        width: 150px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    .Donhang a {
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        margin: 0 2px;
+        display: inline-block;
+    }
+
+        .Donhang a[href*="Edit"] {
+            background-color: #007bff;
+            color: white;
+            margin:5px;
+        }
+
+        .Donhang a[href*="Delete"] {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .Donhang a:hover {
+            opacity: 0.85;
+        }
+
+.add {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fef2f2;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+}
+
+    .add input[type="text"], .add .aspNetTextBox {
+        width: 200px;
+        padding: 6px 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+.search-box {
+    background-color: #ffeaea; /* màu hồng nhạt giống bảng */
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border: 1px solid #f3cccc;
+}
+
+    .search-box h3 {
+        margin-left: 60px;
+        color: #2c3e50;
+        font-size: 20px;
+    }
+
+.form-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-left:45px;
+}
+
+.btn-search {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left:105px;
+}
+
+    .btn-search:hover {
+        background-color: #27ae60;
+    }
+
+.search-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    padding-left: 10px;
+}
+
+    

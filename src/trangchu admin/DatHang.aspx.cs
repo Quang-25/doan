@@ -28,7 +28,7 @@ namespace doan.src.trangchu_admin
                 string query = "SELECT * FROM DonHang";
                 if (!string.IsNullOrEmpty(search))
                 {
-                    query += " WHERE MaDH = @search";
+                    query += " WHERE MaSP = @search";
                 }
 
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -74,6 +74,7 @@ namespace doan.src.trangchu_admin
                 cmd.Parameters.AddWithValue("@MaSP", maSP);
                 cmd.Parameters.AddWithValue("@NgayDatHang", ngay);
                 cmd.Parameters.AddWithValue("@MaDH", maDH);
+                
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -97,30 +98,11 @@ namespace doan.src.trangchu_admin
 
             LoadDonHang();
         }
-        protected void btnAdd_Click(object sender, EventArgs e)
+        protected void btnTimKiem_Click(object sender, EventArgs e)
         {
-            int soLuong = int.Parse(txtSoLuong.Text);
-            int maND = int.Parse(txtMaND.Text);
-            int maSP = int.Parse(txtMaSP.Text);
-            DateTime ngay = DateTime.Now;
-            string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(connStr))
-
-            {
-                string query = "INSERT INTO DonHang (SoLuong, MaND, MaSP, NgayDatHang) VALUES (@SoLuong, @MaND, @MaSP, @NgayDatHang)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@SoLuong", soLuong);
-                cmd.Parameters.AddWithValue("@MaND", maND);
-                cmd.Parameters.AddWithValue("@MaSP", maSP);
-                cmd.Parameters.AddWithValue("@NgayDatHang", ngay);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-            }
-
-            LoadDonHang();
+            string searchMaDH = txtTimMaSP.Text.Trim();
+            LoadDonHang(searchMaDH);
         }
-
-
 
     }
 }

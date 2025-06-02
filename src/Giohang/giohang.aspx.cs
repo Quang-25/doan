@@ -23,6 +23,15 @@ namespace doan.src.Giohang
             }
             
         }
+        private string GetUserIdFromCookie()
+        {
+            if (Session["idUser"] != null)
+            {
+                return Session["idUser"].ToString();
+            }
+
+            return null;
+        }
         public void pageload()
         {
             items = GetCart();
@@ -71,9 +80,11 @@ namespace doan.src.Giohang
             {
                 string query = @"Select SanPham.MaSp, SanPham.TenSp,SanPham.Gia,SanPham.KhuyenMai,SanPham.LoaiSp,SanPham.MoTa,SanPham.TinhTrang,SanPham.HinhAnhChinh,SanPham.HinhAnhPhu,SanPham.HinhAnhPhu2,SanPham.XuatXu,SanPham.NgayTao,DonHang.SoLuong FROM DonHang 
                 Join SanPham ON DonHang.MaSP=SanPham.MaSP
-                Join NguoiDung ON DonHang.MaND=NguoiDung.MaND ORDER BY SanPham.NgayTao";
-
+                Join NguoiDung ON DonHang.MaND=NguoiDung.MaND Where NguoiDung.MaND = @iduser ORDER BY SanPham.NgayTao";
+                
+                string userId = GetUserIdFromCookie();
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@iduser", userId);
                 try
                 {
                     conn.Open();
