@@ -17,6 +17,14 @@ namespace doan.src.trangchu_admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Kiểm tra session để xác nhận người dùng đã đăng nhập và có quyền admin
+            if (Session["idUser"] == null || Session["ChucVu"] == null ||
+                !Session["ChucVu"].ToString().ToLower().Equals("admin"))
+            {
+                // Nếu người dùng chưa đăng nhập hoặc không phải admin, chuyển hướng về trang đăng nhập
+                Response.Redirect("/src/dangnhap/login.aspx");
+                return;
+            }
             Response.ContentEncoding = System.Text.Encoding.UTF8;
             Response.Charset = "utf-8";
             if (!IsPostBack)

@@ -19,32 +19,42 @@ namespace doan.src.home
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-
             if (!IsPostBack)
             {
                 string userId = GetUserIdFromCookie();
                 if (userId == null)
                 {
-                    Response.Redirect("/src/dangkydangnhap/login");
+                    // Sửa đường dẫn, thêm phần mở rộng .aspx
+                    Response.Redirect("/src/dangnhap/login.aspx");
                     return;
                 }
                 pageload();
             }
-
-            
-           
-
         }
+
         private string GetUserIdFromCookie()
         {
+            // Ưu tiên kiểm tra Session trước
             if (Session["idUser"] != null)
             {
                 return Session["idUser"].ToString();
             }
-            
+
+            // Nếu không có Session, kiểm tra Cookie
+            HttpCookie userCookie = Request.Cookies["UserInfo"];
+            if (userCookie != null && !string.IsNullOrEmpty(userCookie["UserID"]))
+            {
+                // Phục hồi Session từ Cookie
+                Session["idUser"] = userCookie["UserID"];
+                Session["ChucVu"] = userCookie["UserRole"];
+                Session["UserName"] = userCookie["UserName"];
+
+                return userCookie["UserID"];
+            }
+
             return null;
         }
+
         public void pageload()
         {
             items = GetProducts();
