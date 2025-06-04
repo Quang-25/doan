@@ -7,38 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace doan.src.home
+namespace doan.src.headerr
 {
 
 
-    public partial class home
+    public partial class headerr
     {
 
         /// <summary>
-        /// form1 control.
+        /// lblgiohang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblgiohang;
 
         /// <summary>
-        /// headerHome control.
+        /// txtSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::doan.src.headerr.headerr headerHome;
-
-        /// <summary>
-        /// rptSanPham control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptSanPham;
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
     }
 }

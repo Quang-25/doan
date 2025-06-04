@@ -1,10 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="giohang.aspx.cs" Inherits="doan.src.Giohang.giohang" %>
-
+<%@ Register Src="~/src/headerr/headerr.ascx" TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/src/footerr/footerr.ascx" TagPrefix="ux" TagName="FooterHome" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <link rel="stylesheet" href="../home/trang.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <style type="text/css">
         body {
             font-family:Arial, Helvetica, sans-serif;
@@ -106,6 +110,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
+            <uc:Header runat="server" ID="headerHome"></uc:Header>
+        <div>
+
+     
         <div class="cart">
         <h3 class="name">Giỏ Hàng</h3>
         </div>
@@ -120,13 +128,13 @@
             Số lượng:
             <asp:LinkButton ID="btnGiam" runat="server" 
                 CommandName="GiamSoLuong" 
-                CommandArgument='<%# Eval("MaSP") %>'>-</asp:LinkButton>
+                CommandArgument='<%# Eval("MaSP") %>'></asp:LinkButton>
 
             <%# Eval("SoLuong") %>
 
             <asp:LinkButton ID="btnTang" runat="server" 
                 CommandName="TangSoLuong" 
-                CommandArgument='<%# Eval("MaSP") %>'>+</asp:LinkButton>
+                CommandArgument='<%# Eval("MaSP") %>'></asp:LinkButton>
         </div>
         <div class="bold">
             Thành tiền:<%# (Convert.ToInt32(Eval("Gia"))* Convert.ToInt32(Eval("SoLuong"))).ToString("N0") %>đ
@@ -142,6 +150,9 @@
             <asp:Button ID="btnViewMore" runat="server" Text="XEM THÊM SẢN PHẨM" CssClass="aspButton" />
             <asp:Button ID="btnCheckout" runat="server" Text="THANH TOÁN" CssClass="aspButton" OnClick="btnCheckout_Click" />
         </div>
+               </div>
+          <ux:FooterHome runat="server" />
+
     </form>
 </body>
 </html>

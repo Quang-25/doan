@@ -40,6 +40,10 @@ namespace doan.src.home
                 return Session["idUser"].ToString();
             }
 
+            
+
+
+
             // Nếu không có Session, kiểm tra Cookie
             HttpCookie userCookie = Request.Cookies["UserInfo"];
             if (userCookie != null && !string.IsNullOrEmpty(userCookie["UserID"]))
@@ -55,16 +59,21 @@ namespace doan.src.home
             return null;
         }
 
+           
+        
+
+
+
+          
+        
+
+
         public void pageload()
         {
             items = GetProducts();
             rptSanPham.DataSource = items;
             rptSanPham.DataBind();
-            List<modelItems> gioHang = GetOder();
-            int soLuong = gioHang.Count;
-            int tongTien = gioHang.Sum(item => item.Gia);
-
-            lblgiohang.Text = $"{soLuong} sản phẩm - {tongTien:N0} đ";
+            
         }
         
 
@@ -75,7 +84,9 @@ namespace doan.src.home
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string query = @"SELECT MaSP, TenSP, Gia, KhuyenMai,TongSoLuong, LoaiSP, MoTa , TinhTrang, HinhAnhChinh,HinhAnhPhu,HinhAnhPhu2,XuatXu,NgayTao From SanPham ORDER BY NgayTao OFFSET 0 ROWS FETCH NEXT 8 ROWS ONLY ";
+                string userId = GetUserIdFromCookie();
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@userId", userId);
                 try
                 {
                     conn.Open();
@@ -85,10 +96,10 @@ namespace doan.src.home
                         int giaGoc = Convert.ToInt32(reader["Gia"]);
                         int khuyenMaiPhanTram = Convert.ToInt32(reader["KhuyenMai"]);
                         int giaSauKhuyenMai = giaGoc;
-   
+                        
                         if (khuyenMaiPhanTram > 0)
                         {
-                            giaSauKhuyenMai = giaGoc - (giaGoc * khuyenMaiPhanTram / 100);
+                            giaSauKhuyenMai = giaGoc - (giaGoc * khuyenMaiPhanTram / 100);  
 
                         }
                         modelItems item = new modelItems
@@ -126,15 +137,16 @@ namespace doan.src.home
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string userId = GetUserIdFromCookie();
-                string query = @"INSERT INTO DonHang (Soluong,MaND,MaSP) VALUES (@soluong,@idND,@idSp)";
+                string query = @"INSERT INTO DonHang (Soluong,MaND,MaSP) VALUES (@soluong,@userId,@idSp)";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@soluong", 1);
-                cmd.Parameters.AddWithValue("@idND", userId);
+                cmd.Parameters.AddWithValue("@userId", userId);
                 cmd.Parameters.AddWithValue("@idSp", e.CommandArgument.ToString());
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
             pageload();
+            headerHome.pageload();
 
         }
         public List<modelItems> GetOder()
@@ -143,11 +155,16 @@ namespace doan.src.home
             string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connStr))
             {
+                
                 string query = @"Select SanPham.MaSp, SanPham.TenSp,SanPham.Gia,SanPham.KhuyenMai,DonHang.SoLuong,SanPham.LoaiSp,SanPham.MoTa,SanPham.TinhTrang,SanPham.HinhAnhChinh,SanPham.HinhAnhPhu,SanPham.HinhAnhPhu2,SanPham.XuatXu,SanPham.NgayTao,DonHang.SoLuong
                 FROM DonHang
                 Join SanPham ON DonHang.MaSP = SanPham.MaSP
-                Join NguoiDung ON DonHang.MaND = NguoiDung.MaND ORDER BY SanPham.NgayTao";
+                Join NguoiDung ON DonHang.MaND = NguoiDung.MaND 
+                WHERE DonHang.MaND = @userId
+                ORDER BY SanPham.NgayTao";
+                string userId = GetUserIdFromCookie();
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@userId", userId);
                 try
                 {
                     conn.Open();

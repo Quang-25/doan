@@ -1,103 +1,19 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="doan.src.home.home" %>
-
+<%@ Register Src="~/src/headerr/headerr.ascx" TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/src/footerr/footerr.ascx" TagPrefix="ux" TagName="FooterHome" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="trangchu.css" />
+    <link rel="stylesheet" href="trang.css" />
     <link rel="icon" type="image/png" href="https://demo037102.web30s.vn/datafiles/34058/upload/images/logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <div class="header">
-                <div class="logo-box">
-                    <img src="https://demo037102.web30s.vn/datafiles/34058/upload/images/logo.png" alt="Trà sữa" />
-                </div>
-
-                <div class="account-menu">
-                <span class="account-label">Tài khoản</span>
-                 <div class="dropdown-content">
-                <a href="DangNhap.aspx">Đăng nhập</a>
-                <a href="DangKy.aspx">Đăng ký</a>
-                </div>
-                </div>
-                <div class="yeuthich">
-                <span class="account-label">Yêu thích</span>
-                </div>
-                <div class="giohang">
-                    <div>
-                         <a href="/src/Giohang/giohang.aspx" style="text-decoration: none; color: inherit; font-size:14px">GIỎ HÀNG</a>
-                    </div>
-                    <div class="count">
-                        <asp:Label ID="lblgiohang" runat="server"></asp:Label>
-                    </div>
-                    </div>
-                    <span class="basket"><i class="fa fa-shopping-basket"></i></span>
-            </div>
-
-            <div class="box-Menu">
-                <ul>
-                    <li><a class="titleMenu" href="#">Trang chủ</a></li>
-                    <li><a class="titleMenu" href="#">Giới thiệu</a></li>
-                    <li class="menu-dropdown">
-                        <a class="titleMenu" href="#">Menu Trà Sữa</a>
-                        <div class="dropdown-container">
-                            <div class="dropdown-column">
-                                <h5>Trà sữa sinh tố</h5>
-                                <a class="detailTraSuaSinhTo" href="#">Trà truyền thống</a>
-                                <a class="detailTraSuaSinhTo" href="#">Trà sữa trái cây</a>
-                                <a class="detailTraSuaSinhTo" href="#">Trà sữa đài loan</a>
-                            </div>
-                            <div class="dropdown-column">
-                                <h5>Nước ép trái cây</h5>
-                                <a class="detailTraSuaSinhTo" href="#">Nước ép chai</a>
-                                <a class="detailTraSuaSinhTo" href="#">Nước ép thiên nhiên</a>
-                                <a class="detailTraSuaSinhTo" href="#">Nước ép tươi</a>
-                            </div>
-                            <div class="dropdown-column">
-                                <h5>Kem</h5>
-                                <a class="detailTraSuaSinhTo" href="#">Kem Gelato, Ý</a>
-                                <a class="detailTraSuaSinhTo" href="#">Kem Helado, Argentina</a>
-                                <a class="detailTraSuaSinhTo" href="#">Kem Ais Kacang, Malaysia</a>
-                                <a class="detailTraSuaSinhTo" href="#">Kem Mochi, Nhật Bản</a>
-                                <a class="detailTraSuaSinhTo" href="#">Kem Ben & Jerry's, Vermont, Mỹ</a>
-                                <a class="detailTraSuaSinhTo" href="#">Kem Mochi, Nhật Bản</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class=" dichvu-dropdown">
-                        <a class="titleMenu" href="#">Dịch vụ</a>
-                        <div class="dropdown-dichvu">
-                        <ul >
-                            <li><a href="#">Hỗ trợ khách hàng</a></li>
-                            <li><a href="#">Giao hàng</a></li>
-                        </ul>
-                        </div>
-                      
-                    </li>
-                    <li><a class="titleMenu" href="#">Tin Tức</a></li>
-                    <li><a class="titleMenu" href="#">Thư Viện</a></li>
-                    <li><a class="titleMenu" href="/src/Liên%20Hệ/LienHe">Liên hệ</a></li>
-                    <li>
-                        <div class="search">
-                             <asp:TextBox ID="txtSearch" runat="server" CssClass="search-for" Placeholder="Nhap tu khoa..." ></asp:TextBox>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 
-                                 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 
-                                 4.23-1.57l.27.28v.79l5 4.99L20.49 
-                                 19l-4.99-5zm-6 0C8.01 14 6 11.99 
-                                 6 9.5S8.01 5 10.5 5 15 7.01 15 
-                                 9.5 12.99 14 10.5 14z" />
-                            </svg>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <uc:Header runat="server" ID="headerHome"></uc:Header>
         <div class="anh">
             <img src="https://demo037102.web30s.vn/datafiles/34058/upload/images/banner/slide1.jpg?t=1636600660" class="meetmore" alt="anh loi" />
         </div>
@@ -168,32 +84,7 @@
         </ItemTemplate>
     </asp:Repeater>
         </div>
-        <div class="footer">
-            <div class="footer-column">
-                <span class="footer-icon"><i class="fa-solid fa-house"></i></span>
-                <h3 class="Home">GIỜ MỞ CỬA</h3>
-                <div class="footer-text">Thứ 2-6: 8h00 am - 22h00 pm</div>
-                <div class="footer-text">Thứ 7-CN: 9h00 am - 21h00 pm</div>
-            </div>
-            <div class="footer-column">
-                <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
-                <h3 class="Home">THÔNG TIN LIÊN HỆ</h3>
-                <div class="footer-text">Địa chỉ:196 Nguyễn Đình Chiểu,P.Võ Thị Sáu,Q.3,TP.HCM</div>
-                <div class="footer-text">Hotline:19009477</div>
-            </div>
-            <div class="footer-column">
-                <span class="footer-icon"><i class="fa-solid fa-share-nodes"></i></></span>
-                <h3 class="Home">KẾT NỐI VỚI CHÚNG TÔI</h3>
-                <div class="social-network">
-                    <span class="social-icon"><i class="fa-brands fa-facebook"></i></span>
-                    <span class="social-icon"><i class="fa-solid fa-phone"></i></span>
-                    <span class="social-icon"><i class="fa-brands fa-twitter"></i></span>
-                    <span class="social-icon"><i class="fa-brands fa-youtube"></i></span>
-                    <span class="social-icon"><i class="fa-brands fa-pinterest"></i></span>
-                </div>
-            </div>
-        </div>
-
+     <ux:FooterHome runat="server" />
     </form>
 </body>
 </html>

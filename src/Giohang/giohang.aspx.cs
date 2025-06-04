@@ -17,8 +17,16 @@ namespace doan.src.Giohang
         public List<modelItems> items= new List<modelItems>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
             if (!IsPostBack)
             {
+                string userId = GetUserIdFromCookie();
+                if (userId == null)
+                {
+                    Response.Redirect("/src/dangnhap/login");
+                    return;
+                }
                 pageload();
             }
             
@@ -81,11 +89,12 @@ namespace doan.src.Giohang
             {
                 string query = @"Select SanPham.MaSp, SanPham.TenSp,SanPham.Gia,SanPham.KhuyenMai,SanPham.LoaiSp,SanPham.MoTa,SanPham.TinhTrang,SanPham.HinhAnhChinh,SanPham.HinhAnhPhu,SanPham.HinhAnhPhu2,SanPham.XuatXu,SanPham.NgayTao,DonHang.SoLuong FROM DonHang 
                 Join SanPham ON DonHang.MaSP=SanPham.MaSP
-                Join NguoiDung ON DonHang.MaND=NguoiDung.MaND Where NguoiDung.MaND = @iduser ORDER BY SanPham.NgayTao";
-                
+                Join NguoiDung ON DonHang.MaND=NguoiDung.MaND 
+                WHERE DonHang.MaND = @userId
+                ORDER BY SanPham.NgayTao";
                 string userId = GetUserIdFromCookie();
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@iduser", userId);
+                cmd.Parameters.AddWithValue("@userId", userId);
                 try
                 {
                     conn.Open();
@@ -160,6 +169,10 @@ namespace doan.src.Giohang
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
             Response.Redirect("/src/Thanhtoan/Thanhtoan.aspx");
+
+
+
+
         }
     }
 }

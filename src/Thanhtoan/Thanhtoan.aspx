@@ -1,10 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Thanhtoan.aspx.cs" Inherits="doan.src.Thanhtoan.Thanhtoan" %>
-
+<%@ Register Src="~/src/headerr/headerr.ascx" TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/src/footerr/footerr.ascx" TagPrefix="ux" TagName="FooterHome" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="../home/trang.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style type="text/css">
      body { font-family: Arial; background: #f5f5f5; padding: 20px; }
     .form-section { background: #f2f2f2; padding: 20px; width: 400px; }
@@ -18,6 +21,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+         <uc:Header runat="server" ID="headerHome"></uc:Header>
         <div class="form-container">
              <div class="form-section">
             <h2>Thông tin thanh toán</h2>
@@ -80,6 +84,7 @@
             <asp:Button ID="btnThanhToan" runat="server" Text="Thanh Toán" CssClass="btn" OnClick="btnThanhToan_Click" />
         </div>
        </div>
+        <ux:FooterHome runat="server" />
     </form>
 </body>
 </html>

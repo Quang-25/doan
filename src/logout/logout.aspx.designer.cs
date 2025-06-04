@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace doan.src.home
+namespace YourNamespace
 {
 
 
-    public partial class home
+    public partial class Logout
     {
 
         /// <summary>
@@ -22,23 +22,5 @@ namespace doan.src.home
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// headerHome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::doan.src.headerr.headerr headerHome;
-
-        /// <summary>
-        /// rptSanPham control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptSanPham;
     }
 }
