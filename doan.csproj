@@ -294,7 +294,6 @@
     </Compile>
     <Compile Include="src\logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="src\logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
