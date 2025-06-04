@@ -1,10 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LienHe.aspx.cs" Inherits="doan.src.Liên_Hệ.LienHe" %>
-
+<%@ Register Src="~/src/headerr/headerr.ascx" TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/src/footerr/footerr.ascx" TagPrefix="ux" TagName="FooterHome" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Liên hệ</title>
+     <link rel="stylesheet" href="../home/trang.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style type="text/css">
     body{
         font-family: Arial,sans-serif;
@@ -154,6 +157,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+         <uc:Header runat="server" ID="headerHome"></uc:Header>
          <div class="wrapper">
 
      <!--THÔNG TIN LIÊN HỆ -->
@@ -240,6 +244,7 @@
     </div>
          </div>
  </div>
+        <ux:FooterHome runat="server" />
     </form>
 </body>
 </html>
