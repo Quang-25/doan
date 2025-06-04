@@ -21,7 +21,7 @@
 <div class="search-box">
     <h3>Tìm kiếm đơn hàng</h3>
     <div class="form-search">
-        <asp:TextBox ID="txtTimMaSP" runat="server" CssClass="form-control" Placeholder="Nhập mã đơn hàng cần tìm" />
+        <asp:TextBox ID="txtTimMaSP" runat="server" CssClass="form-control" Placeholder="Nhập mã sản phẩm cần tìm" />
         <asp:Button ID="btnTimKiem" runat="server" Text="Tìm" CssClass="btn-search" OnClick="btnTimKiem_Click" />
     </div>
     <asp:Label ID="lblThongBao" runat="server" CssClass="search-message" />
