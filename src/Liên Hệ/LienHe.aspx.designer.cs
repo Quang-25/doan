@@ -87,6 +87,15 @@ namespace doan.src.Liên_Hệ
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
 
         /// <summary>
+        /// lblLoiEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLoiEmail;
+
+        /// <summary>
         /// lblSDT control.
         /// </summary>
         /// <remarks>
@@ -121,6 +130,15 @@ namespace doan.src.Liên_Hệ
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revSDT;
+
+        /// <summary>
+        /// lblLoiSDT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLoiSDT;
 
         /// <summary>
         /// lblDiachi control.

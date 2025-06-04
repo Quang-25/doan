@@ -73,6 +73,7 @@ namespace doan.src.Giohang
         }
         public List<modelItems> GetCart()
         {
+
             List<modelItems> cart = new List<modelItems>();
             List<modelItems> products = new List<modelItems>();
             string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
@@ -158,7 +159,7 @@ namespace doan.src.Giohang
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("/src/Thanhtoan/Thanhtoan.aspx");
         }
     }
 }
