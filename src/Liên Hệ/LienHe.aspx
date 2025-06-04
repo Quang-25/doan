@@ -187,8 +187,9 @@
                  <asp:Label ID="lblEmail" runat="server" CssClass="form-label"></asp:Label>
                  <asp:TextBox ID="txtEmail" runat="server" CssClass="required:*"  Placeholder="*Email" Height="30px" > 
                  </asp:TextBox>
-                 <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Bạn vui lòng nhập email!" CssClass="text-danger" Display="Dynamic" />
-                 <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" ErrorMessage="Email không hợp lệ!" CssClass="text-danger" Display="Dynamic" />
+                 <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Bạn vui lòng nhập email!" CssClass="text-danger" Display="Dynamic" AutoPostBack="True" OnTextChanged="txtEmail_TextChanged"/>
+                 <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ErrorMessage="Email không hợp lệ!" CssClass="text-danger" Display="Dynamic" />
+                 <asp:Label ID="lblLoiEmail" runat="server" CssClass="text-danger" />
              </div>
          </div>
 
@@ -196,8 +197,9 @@
              <div class="form-group">
                  <asp:Label ID="lblSDT" runat="server" CssClass="form-label"></asp:Label>
                  <asp:TextBox ID="txtSDT" runat="server" Placeholder="*Số điện thoại" height="30px"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="rfvSDT" runat="server" ControlToValidate="txtSDT" ErrorMessage="Bạn vui lòng nhập số điện thoại!" CssClass="text-danger" Display="Dynamic" />
-                 <asp:RegularExpressionValidator ID="revSDT" runat="server" ControlToValidate="txtSDT" ValidationExpression="^\d+$" ErrorMessage="Số điện thoại chỉ được nhập số!" CssClass="text-danger" Display="Dynamic" />
+                 <asp:RequiredFieldValidator ID="rfvSDT" runat="server" ControlToValidate="txtSDT" ErrorMessage="Bạn vui lòng nhập số điện thoại!" CssClass="text-danger" Display="Dynamic" AutoPostBack="True" OnTextChanged="txtSDT_TextChanged" />
+                 <asp:RegularExpressionValidator ID="revSDT" runat="server" ControlToValidate="txtSDT" ValidationExpression="^(0|\+84|84)(3|5|7|8|9)\d{8}$" ErrorMessage="Số điện thoại chưa đúng định dạng" CssClass="text-danger" Display="Dynamic" />
+                 <asp:Label ID="lblLoiSDT" runat="server" CssClass="text-danger" />
               </div>
              
              <div class="form-group">

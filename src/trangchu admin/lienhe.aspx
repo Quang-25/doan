@@ -100,6 +100,11 @@
     font-weight: bold;
     color: green;
     }
+    .text-danger {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -188,10 +193,21 @@
         <h3 style="margin-top: 0;">Thêm liên hệ mới</h3>
         <asp:Panel ID="pnlAdd" runat="server">
             <asp:TextBox ID="txtHoTen" runat="server" Placeholder="Họ tên" CssClass="form-control" /><br />
+            <asp:RequiredFieldValidator ID="rfvHoten" runat="server" ControlToValidate="txtHoTen" ErrorMessage="Bạn vui lòng nhập họ tên!" CssClass="text-danger" Display="Dynamic" />
             <asp:TextBox ID="txtEmail" runat="server" Placeholder="Email" CssClass="form-control" /><br />
+            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Bạn vui lòng nhập email!" CssClass="text-danger" Display="Dynamic" AutoPostBack="True" OnTextChanged="txtEmail_TextChanged"/>
+            <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ErrorMessage="Email không hợp lệ!" CssClass="text-danger" Display="Dynamic" />
+
             <asp:TextBox ID="txtSDT" runat="server" Placeholder="Số điện thoại" CssClass="form-control" /><br />
+            <asp:RequiredFieldValidator ID="rfvSDT" runat="server" ControlToValidate="txtSDT" ErrorMessage="Bạn vui lòng nhập số điện thoại!" CssClass="text-danger" Display="Dynamic" AutoPostBack="True" OnTextChanged="txtSDT_TextChanged" />
+            <asp:RegularExpressionValidator ID="revSDT" runat="server" ControlToValidate="txtSDT" ValidationExpression="^(0|\+84|84)(3|5|7|8|9)\d{8}$" ErrorMessage="Số điện thoại chưa đúng định dạng" CssClass="text-danger" Display="Dynamic" />
+
             <asp:TextBox ID="txtDiaChi" runat="server" Placeholder="Địa chỉ" CssClass="form-control" /><br />
+            <asp:RequiredFieldValidator ID="rfvDiachi" runat="server" ControlToValidate="txtDiachi" ErrorMessage="Bạn vui lòng nhập địa chỉ!" CssClass="text-danger" Display="Dynamic" />
+
             <asp:TextBox ID="txtNoiDung" runat="server" Placeholder="Nội dung" CssClass="form-control" TextMode="MultiLine" Rows="3" /><br />
+            <asp:RequiredFieldValidator ID="rfvNoidung" runat="server" ControlToValidate="txtNoidung" ErrorMessage="Bạn vui lòng nhập nội dung!" CssClass="text-danger" Display="Dynamic" />
+
             <asp:TextBox ID="txtUserName" runat="server" Placeholder="UserName (nếu có)" CssClass="form-control" /><br />
             <asp:Button ID="btnThem" runat="server" Text="Thêm mới" CssClass="btn btn-success" OnClick="btnThem_Click" />
         </asp:Panel>
