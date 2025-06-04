@@ -185,7 +185,7 @@
     <Content Include="src\giohang\giohang.aspx" />
     <Content Include="src\headerr\headerr.ascx" />
     <Content Include="src\home\home.aspx" />
-    <Content Include="src\home\trang.css" />
+    <Content Include="src\home\trangchu.css" />
     <Content Include="src\Liên Hệ\LienHe.aspx" />
     <Content Include="src\logout.aspx" />
     <Content Include="src\Thanhtoan\Thanhtoan.aspx" />
@@ -294,6 +294,7 @@
     </Compile>
     <Compile Include="src\logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="src\logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
