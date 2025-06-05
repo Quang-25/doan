@@ -6,7 +6,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="../home/trangchu.css" />
+    <link rel="stylesheet" href="../home/trang.css" />
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style type="text/css">
         body{
@@ -14,9 +15,6 @@
             background: #f5f5f5;
             margin: 0;
             height: 100%;
-
-            background-image: url('https://demo037102.web30s.vn/datafiles/web30s/upload/images/7101-7200/30S-03-7102/slide2.jpg');
-            background-size: cover;      /* ảnh phủ đầy, không bị lặp */
             background-position: center; /* căn giữa ảnh */
             background-repeat: no-repeat;
             background-attachment: fixed; /* ảnh cố định khi cuộn */
@@ -30,8 +28,8 @@
 
         .form-section {
              background: #fff;    /* nền trắng cho rõ */
-             padding: 30px 50px; /* tăng padding để form thoáng */
-             width: 600px;
+             padding: 3px 30px; /* tăng padding để form thoáng */
+             width: 445px;
              box-sizing: border-box;
              border-radius: 10px;
              box-shadow: 0 8px 16px #000000; /* bóng mờ đậm hơn */

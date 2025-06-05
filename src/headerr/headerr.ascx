@@ -16,6 +16,9 @@
          <div class="yeuthich">
          <span class="account-label">Yêu thích</span>
          </div>
+          <div class="sosanh">
+          <span class="account-label">So sánh</span>
+          </div>
          <div class="giohang">
              <div>
                   <a href="/src/Giohang/giohang.aspx" style="text-decoration: none; color: inherit; font-size:14px">GIỎ HÀNG</a>

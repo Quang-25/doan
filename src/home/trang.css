@@ -42,6 +42,11 @@
     display: inline-block;
     margin-left: 10px
 }
+.sosanh {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px
+}
 .favourite {
     color: green;
     cursor: pointer;
@@ -83,7 +88,7 @@
     color: #4CAF50;
     font-weight: bold;
     gap: 0px;
-    margin-left: 240px;
+    margin-left: 175px;
 
 }
 
