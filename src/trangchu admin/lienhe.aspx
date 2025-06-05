@@ -2,30 +2,30 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
     .search-container {
-    display: flex;
-    gap: 10px;
-    padding: 12px;
-    background-color: #f7f7f8;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    align-items: center;
+        display: flex;
+        gap: 10px;
+        padding: 12px;
+        background-color: #f7f7f8;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        align-items: center;
     }
 
     .form-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 200px;
-    flex-shrink: 0;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px #0000001A;
+        width: 200px;
+        flex-shrink: 0;
     }
 
     .table {
-    border-collapse: separate !important;
-    border-spacing: 0 8px;
-    width: 100%;
-    border: none !important;
-    background: #fff;
+        border-collapse: separate !important;
+        border-spacing: 0 8px;
+        width: 100%;
+        border: none !important;
+        background: #fff;
     }
 
     .table th, .table td {
@@ -46,8 +46,8 @@
     }
 
     .gv-pagination {
-    margin-top: 20px;
-    text-align: center;
+        margin-top: 20px;
+        text-align: center;
     }
 
     .gv-pagination a, .gv-pagination span {
@@ -65,46 +65,46 @@
     }
 
     .btn {
-    border-radius: 6px !important;
-    padding: 8px 16px !important;
-    font-size: 14px !important;
+        border-radius: 6px !important;
+        padding: 8px 16px !important;
+        font-size: 14px !important;
     }
 
     .btn-success {
-    background-color: #28a745 !important;
-    border: none !important;
+        background-color: #28a745 !important;
+        border: none !important;
     }
 
     .btn-primary {
-    background-color: #32CD32 !important;
-    border: none !important;
+        background-color: #32CD32 !important;
+        border: none !important;
     }
 
     .btn-secondary {
-    background-color: #32CD32 !important;
-    border: none !important;
+        background-color: #32CD32 !important;
+        border: none !important;
     }
 
     .form-control {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
     }
 
     /* Label thông báo */
     .message-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: green;
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #008000;
     }
     .text-danger {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 5px;
-}
+        color: #ff0000;
+        font-size: 14px;
+        margin-top: 5px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -116,8 +116,8 @@
     <%--<!-- Thanh tìm kiếm nằm trong bảng -->--%>
     <div class="search-container" style="margin-bottom: 10px;">
         <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control search-box" Placeholder="🔍 Tìm theo họ tên hoặc email hoặc user..." />
-        <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" CssClass="btn btn-primary search-button" OnClick="btnSearch_Click" />
-        <asp:Button ID="btnReset" runat="server" Text="Làm mới" CssClass="btn btn-secondary" OnClick="btnReset_Click" />
+        <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" CssClass="btn btn-primary search-button" OnClick="btnSearch_Click" CausesValidation="false"/>
+        <asp:Button ID="btnReset" runat="server" Text="Làm mới" CssClass="btn btn-secondary" OnClick="btnReset_Click" CausesValidation="false"/>
     </div>
 
     <asp:GridView ID="gvLienHe" runat="server" AutoGenerateColumns="False" DataKeyNames="MaLH"
@@ -183,7 +183,7 @@
             </EditItemTemplate>
         </asp:TemplateField>
                 <asp:BoundField DataField="NgayGui" HeaderText="Ngày gửi" ReadOnly="True" DataFormatString="{0:dd/MM/yyyy HH:mm}" />
-                <asp:CommandField ShowEditButton="true" EditText="✏️ Sửa" UpdateText="💾 Lưu" CancelText="❌ Hủy" />
+                <asp:CommandField ShowEditButton="true" EditText="✏️ Sửa" UpdateText="💾 Lưu" CancelText="❌ Hủy" CausesValidation="false" />
                 <asp:CommandField ShowDeleteButton="true" DeleteText="🗑️ Xóa" />
      </Columns>
      </asp:GridView>
@@ -209,7 +209,7 @@
             <asp:RequiredFieldValidator ID="rfvNoidung" runat="server" ControlToValidate="txtNoidung" ErrorMessage="Bạn vui lòng nhập nội dung!" CssClass="text-danger" Display="Dynamic" />
 
             <asp:TextBox ID="txtUserName" runat="server" Placeholder="UserName (nếu có)" CssClass="form-control" /><br />
-            <asp:Button ID="btnThem" runat="server" Text="Thêm mới" CssClass="btn btn-success" OnClick="btnThem_Click" />
+            <asp:Button ID="btnThem" runat="server" Text="Thêm mới" CssClass="btn btn-success" OnClick="btnThem_Click"/>
         </asp:Panel>
         <asp:Label ID="lblMessage" runat="server" CssClass="message-label" />
     </div>
