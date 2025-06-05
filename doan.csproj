@@ -185,7 +185,7 @@
     <Content Include="src\giohang\giohang.aspx" />
     <Content Include="src\headerr\headerr.ascx" />
     <Content Include="src\home\home.aspx" />
-    <Content Include="src\home\trang.css" />
+    <Content Include="src\home\trangchu.css" />
     <Content Include="src\Liên Hệ\LienHe.aspx" />
     <Content Include="src\Thanhtoan\Thanhtoan.aspx" />
     <Content Include="src\trangchu admin\han.css" />
