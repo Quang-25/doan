@@ -75,6 +75,7 @@ namespace doan.src.trangchu_admin
                         lblMessage.ForeColor = System.Drawing.Color.Green;
                         ClearForm();
                         LoadData();
+                        
                     }
                     else
                     {

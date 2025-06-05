@@ -1,46 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\doan1\\",
+  "WorkspaceRootPath": "C:\\Users\\84899\\source\\repos\\doa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan1\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\dangnhap\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\dangnhap\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\dangnhap\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\dangnhap\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan1\\src\\headerr\\headerr.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\headerr\\headerr.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan1\\src\\thanhtoan\\thanhtoan.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\thanhtoan\\thanhtoan.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\li\u00EAn h\u1EC7\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\84899\\source\\repos\\doa\\src\\li\u00EAn h\u1EC7\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\li\u00EAn h\u1EC7\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\sanpham.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\sanpham.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\84899\\source\\repos\\doa\\src\\thanhtoan\\thanhtoan.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\thanhtoan\\thanhtoan.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\li\u00EAn h\u1EC7\\lienhe.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\84899\\source\\repos\\doa\\src\\li\u00EAn h\u1EC7\\lienhe.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\li\u00EAn h\u1EC7\\lienhe.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\sanpham.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\sanpham.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\84899\\source\\repos\\doa\\src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan1\\src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\lienhe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\84899\\source\\repos\\doa\\src\\thanhtoan\\thanhtoan.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\thanhtoan\\thanhtoan.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\84899\\source\\repos\\doa\\src\\trangchu admin\\lienhe.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\trangchu admin\\lienhe.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +34,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LienHe.aspx",
+              "DocumentMoniker": "C:\\Users\\84899\\source\\repos\\doa\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
+              "RelativeDocumentMoniker": "src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
+              "ToolTip": "C:\\Users\\84899\\source\\repos\\doa\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
+              "RelativeToolTip": "src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T17:47:57.718Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
@@ -65,33 +71,51 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "lienhe.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\84899\\source\\repos\\doa\\src\\trangchu admin\\lienhe.aspx.cs",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\lienhe.aspx.cs",
+              "ToolTip": "C:\\Users\\84899\\source\\repos\\doa\\src\\trangchu admin\\lienhe.aspx.cs",
+              "RelativeToolTip": "src\\trangchu admin\\lienhe.aspx.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAcwKgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T07:49:25.09Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "headerr.ascx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\headerr\\headerr.ascx",
-              "RelativeDocumentMoniker": "src\\headerr\\headerr.ascx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\headerr\\headerr.ascx",
-              "RelativeToolTip": "src\\headerr\\headerr.ascx",
+              "Title": "lienhe.aspx",
+              "DocumentMoniker": "C:\\Users\\84899\\source\\repos\\doa\\src\\trangchu admin\\lienhe.aspx",
+              "RelativeDocumentMoniker": "src\\trangchu admin\\lienhe.aspx",
+              "ToolTip": "C:\\Users\\84899\\source\\repos\\doa\\src\\trangchu admin\\lienhe.aspx",
+              "RelativeToolTip": "src\\trangchu admin\\lienhe.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-06-04T05:08:02.6Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-05T04:20:36.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Thanhtoan.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\84899\\source\\repos\\doa\\src\\Thanhtoan\\Thanhtoan.aspx.cs",
+              "RelativeDocumentMoniker": "src\\Thanhtoan\\Thanhtoan.aspx.cs",
+              "ToolTip": "C:\\Users\\84899\\source\\repos\\doa\\src\\Thanhtoan\\Thanhtoan.aspx.cs",
+              "RelativeToolTip": "src\\Thanhtoan\\Thanhtoan.aspx.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAcwK8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:52:10.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Thanhtoan.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\Thanhtoan\\Thanhtoan.aspx",
+              "DocumentMoniker": "C:\\Users\\84899\\source\\repos\\doa\\src\\Thanhtoan\\Thanhtoan.aspx",
               "RelativeDocumentMoniker": "src\\Thanhtoan\\Thanhtoan.aspx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\Thanhtoan\\Thanhtoan.aspx",
+              "ToolTip": "C:\\Users\\84899\\source\\repos\\doa\\src\\Thanhtoan\\Thanhtoan.aspx",
               "RelativeToolTip": "src\\Thanhtoan\\Thanhtoan.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -101,103 +125,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "login.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\dangnhap\\login.aspx",
-              "RelativeDocumentMoniker": "src\\dangnhap\\login.aspx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\dangnhap\\login.aspx",
-              "RelativeToolTip": "src\\dangnhap\\login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T17:47:20.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "home.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\home\\home.aspx",
-              "RelativeDocumentMoniker": "src\\home\\home.aspx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\home\\home.aspx",
-              "RelativeToolTip": "src\\home\\home.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T04:40:21.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "lienhe.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\lienhe.aspx",
-              "RelativeDocumentMoniker": "src\\trangchu admin\\lienhe.aspx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\lienhe.aspx",
-              "RelativeToolTip": "src\\trangchu admin\\lienhe.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-03T06:05:01.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "sanpham.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\sanpham.aspx.cs",
-              "RelativeDocumentMoniker": "src\\trangchu admin\\sanpham.aspx.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\sanpham.aspx.cs",
-              "RelativeToolTip": "src\\trangchu admin\\sanpham.aspx.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T04:10:48.504Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "sanpham.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\sanpham.aspx",
-              "RelativeDocumentMoniker": "src\\trangchu admin\\sanpham.aspx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\trangchu admin\\sanpham.aspx",
-              "RelativeToolTip": "src\\trangchu admin\\sanpham.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T04:00:37.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\dangnhap\\login.aspx.cs",
-              "RelativeDocumentMoniker": "src\\dangnhap\\login.aspx.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\dangnhap\\login.aspx.cs",
-              "RelativeToolTip": "src\\dangnhap\\login.aspx.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAYwCEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:10:30.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LienHe.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
-              "RelativeDocumentMoniker": "src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
-              "RelativeToolTip": "src\\Li\u00EAn H\u1EC7\\LienHe.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T17:47:57.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "LienHe.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\84899\\source\\repos\\doa\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx.cs",
               "RelativeDocumentMoniker": "src\\Li\u00EAn H\u1EC7\\LienHe.aspx.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx.cs",
+              "ToolTip": "C:\\Users\\84899\\source\\repos\\doa\\src\\Li\u00EAn H\u1EC7\\LienHe.aspx.cs",
               "RelativeToolTip": "src\\Li\u00EAn H\u1EC7\\LienHe.aspx.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAqwKsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBYAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T01:35:56.235Z",
               "EditorCaption": ""

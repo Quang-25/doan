@@ -22,6 +22,7 @@
         gap: 20px;
         max-width: 1200px;
         margin: 0 auto;
+        margin-top:40px;
     }
     /*Info (cột trái)*/
     .info{
@@ -40,7 +41,7 @@
     /* Map (cột phải) */
     .map{
         grid-column: 2 / 3;
-        border: 2px solid lightgreen;
+        border: 2px solid #90ee90;
         padding: 5px;
     }
     .map iframe{
@@ -78,7 +79,7 @@
         margin-bottom: 6px;
     }
     .required {
-        color: red;
+        color: #ff0000;
         margin-right: 4px;
     }
     .form-control{
@@ -86,14 +87,14 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-        font-size: 1rem;
+        font-size: 16px;
     }
     .form-control:focus {
         outline: none;
-        border-color: black;        
+        border-color: #000000;        
 
     }
-    .email-hot{  color:black;  transition: color 0.3s ease;}
+    .email-hot{  color:#000000;  transition: color 0.3s ease;}
     .email-hot:hover{
         color:#47b65c;
     }
@@ -102,8 +103,8 @@
         resize:vertical;
     }
     .text-danger {
-        color: red;
-        font-size: 0.9rem;
+        color: #ff0000;
+        font-size: 14px;
         margin-top: 5px;
     }
     /*Captcha nhúng trong input*/
@@ -117,10 +118,10 @@
         border-radius: 4px; box-sizing: border-box;
     }
     .captcha-code {
-        position: absolute; top:50%; right: 40px; transform: translateY(-50%);font-weight: bold; color:green; user-select: none;
+        position: absolute; top:50%; right: 40px; transform: translateY(-50%);font-weight: bold; color:#008000; user-select: none;
     }
     .refresh-btn{
-        position: absolute; top:50%; right:10px; transform: translateY(-50%); background: none; border: none; font-size: 1.2rem; cursor: pointer;
+        position: absolute; top:50%; right:10px; transform: translateY(-50%); background: none; border: none; font-size: 19px; cursor: pointer;
     }
 
     /* Buttons */
@@ -129,28 +130,28 @@
         gap: 10px;
     }
     .btn-row input[type="submit"], .btn-row input[type="button"]{
-        padding: 10px 25px; background: green; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 1rem;
+        padding: 10px 25px; background: #008000; color: #ffffff; border: none; border-radius: 3px; cursor: pointer; font-size: 16px;
     }
     .success {
-    color: green;
-    font-weight: bold;
-    margin-top: 10px;
+        color: #008000;
+        font-weight: bold;
+        margin-top: 10px;
     }
     .fail {
-    color: red;
-    font-weight: bold;
-    margin-top: 10px;
+        color: #ff0000;
+        font-weight: bold;
+        margin-top: 10px;
     }
     .form-control,
     .textarea-control,
     .captcha-input {
-    width: 100%;
+        width: 100%;
     }
     .form-group {
-     width: 100%;
+        width: 100%;
     }
     .section-2 {
-    grid-column: 1 / -1;
+        grid-column: 1 / -1;
     }
 
 </style>
@@ -163,12 +164,12 @@
      <!--THÔNG TIN LIÊN HỆ -->
          <div class="info">
              <h1>LIÊN HỆ</h1>
-             <p><strong>MilkStores</strong>hiện là chuỗi cửa hàng trà sữa lớn nhất tại Việt Nam. Những sản phẩm từ MilkStores đang như một cơn bão rất nhanh chóng lan rộng ra xung quanh Châu Á.</p>
-             <p><strong>Địa chỉ:</strong>196 Nguyễn Đình Chiểu, P.Võ Thị Sáu, Q.3, TP.HCM</p>
+             <p><strong>MilkStores</strong> hiện là chuỗi cửa hàng trà sữa lớn nhất tại Việt Nam. Những sản phẩm từ MilkStores đang như một cơn bão rất nhanh chóng lan rộng ra xung quanh Châu Á.</p>
+             <p><strong>Địa chỉ:</strong> 196 Nguyễn Đình Chiểu, P.Võ Thị Sáu, Q.3, TP.HCM</p>
              
              <div class="email-hot">
-                 <p><b>Hotline:</b><span class="email-hot">19009477</span></p>
-                 <div><b>Email:</b> <a href="mailto:admin@demo037102.web30s.vn">admin@demo037102.web30s.vn</a></div>
+                 <p><b>Hotline:</b><span class="email-hot"> 19009477</span></p>
+                 <div><b>Email:</b> <a href="mailto:admin@demo037102.web30s.vn"> admin@demo037102.web30s.vn</a></div>
              </div>
          </div>
 

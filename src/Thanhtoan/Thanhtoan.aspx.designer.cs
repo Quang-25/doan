@@ -33,6 +33,15 @@ namespace doan.src.Thanhtoan
         protected global::doan.src.headerr.headerr headerHome;
 
         /// <summary>
+        /// lblHoTen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHoTen;
+
+        /// <summary>
         /// txtHoTen control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace doan.src.Thanhtoan
         protected global::System.Web.UI.WebControls.TextBox txtHoTen;
 
         /// <summary>
+        /// lblDiaChi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDiaChi;
+
+        /// <summary>
         /// txtDiaChi control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,15 @@ namespace doan.src.Thanhtoan
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
+
+        /// <summary>
+        /// lblSDT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSDT;
 
         /// <summary>
         /// txtSDT control.
