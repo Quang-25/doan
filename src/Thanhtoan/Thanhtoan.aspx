@@ -9,14 +9,99 @@
     <link rel="stylesheet" href="../home/trangchu.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style type="text/css">
-     body { font-family: Arial; background: #f5f5f5; padding: 20px; }
-    .form-section { background: #f2f2f2; padding: 20px; width: 400px; }
-    .form-group { margin-bottom: 15px; }
-    .form-group label { font-weight: bold; display: block; }
-    .form-group input { width: 100%; padding: 5px; }
-    .summary { margin-top: 20px; }
-    .total { color: red; font-weight: bold; }
-    .btn { background: green; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        body{
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            height: 100%;
+
+            background-image: url('https://demo037102.web30s.vn/datafiles/web30s/upload/images/7101-7200/30S-03-7102/slide2.jpg');
+            background-size: cover;      /* ảnh phủ đầy, không bị lặp */
+            background-position: center; /* căn giữa ảnh */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* ảnh cố định khi cuộn */
+        }
+        .form-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .form-section {
+             background: #fff;    /* nền trắng cho rõ */
+             padding: 30px 50px; /* tăng padding để form thoáng */
+             width: 600px;
+             box-sizing: border-box;
+             border-radius: 10px;
+             box-shadow: 0 8px 16px #000000; /* bóng mờ đậm hơn */
+             transition: box-shadow 0.3s ease;
+        }
+
+        .form-section:hover {
+             box-shadow: 0 12px 24px  #00000033; /* hiệu ứng khi hover */
+        }
+
+        .form-group {
+             margin-bottom: 20px;
+        }
+
+        .form-group label {
+             font-weight: 600;
+             font-size: 14px;
+             margin-bottom: 6px;
+             display: block;
+             color: #333;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+             width: 100%;
+             padding: 10px 12px;
+             font-size: 14px;
+             border: 1.5px solid #ccc;
+             border-radius: 6px;
+             transition: border-color 0.3s ease;
+             resize: vertical;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+              border-color: #28a745;
+              outline: none;
+              box-shadow: 0 0 5px #28a745;
+        }
+
+        .summary {
+              margin-top: 25px;
+              font-size: 16px;
+              margin-bottom: 20px
+        }
+        .summary p {
+            margin-bottom: 10px
+        }
+        .total {
+              color: #d9534f;
+              font-weight: 700;
+        }
+
+        .btn {
+              background: #28a745;
+              color: #FFFFFF;
+              padding: 12px 20px;
+              font-weight: 600;
+              border: none;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 16px;
+              width: 100%;
+              transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+              background: #218838;
+        }
+
 </style>
 </head>
 <body>
@@ -24,17 +109,23 @@
          <uc:Header runat="server" ID="headerHome"></uc:Header>
         <div class="form-container">
              <div class="form-section">
-            <h2>Thông tin thanh toán</h2>
+            <h2 style="text-align: center; margin-bottom: 30px">THÔNG TIN THANH TOÁN</h2>
             <div class="form-group">
-                <label>Họ tên</label>
+                <asp:Label ID="lblHoTen" runat="server"  >
+                   <span style="color:red">*</span> Họ tên
+                </asp:Label>
                 <asp:TextBox ID="txtHoTen" runat="server"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label>Địa chỉ</label>
+                <asp:Label ID="lblDiaChi" runat="server"  >
+                    <span style="color:red">*</span> Địa chỉ
+                </asp:Label>
                 <asp:TextBox ID="txtDiaChi" runat="server"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label>Số điện thoại</label>
+                <asp:Label ID="lblSDT" runat="server">
+                    <span style="color:red">*</span> Số điện thoại
+                </asp:Label>
                 <asp:TextBox ID="txtSDT" runat="server"></asp:TextBox>
             </div>
 
