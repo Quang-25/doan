@@ -46,7 +46,7 @@ namespace YourNamespace
                 }
             }
         }
-
+        
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -90,11 +90,13 @@ namespace YourNamespace
                                 Session["UserName"] = tenND;
                                 Session["ChucVu"] = chucVu;
 
+
                                 // Lưu cookie
                                 HttpCookie userCookie = new HttpCookie("UserInfo");
                                 userCookie["UserID"] = userId.ToString();
                                 userCookie["UserName"] = tenND;
                                 userCookie["UserRole"] = chucVu;
+                                userCookie["TenDangNhap"] = username;
                                 userCookie.Expires = DateTime.Now.AddDays(7); // Cookie có hiệu lực 7 ngày
                                 Response.Cookies.Add(userCookie);
 
@@ -104,6 +106,7 @@ namespace YourNamespace
                                 }
                                 else
                                 {
+                                    TangSoLanTruyCap(username);
                                     Response.Redirect("/src/home/home.aspx");
                                 }
                             }
@@ -120,6 +123,18 @@ namespace YourNamespace
             {
                 lblthongbao.Text = "Lỗi hệ thống: " + ex.Message;
                 lblthongbao.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+        public void TangSoLanTruyCap(string tenDangNhap)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string query = "UPDATE NguoiDung SET SoLanTruyCap = ISNULL(SoLanTruyCap, 0) + 1 WHERE TenDangNhap = @TenDangNhap";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@TenDangNhap", tenDangNhap);
+                conn.Open();
+                cmd.ExecuteNonQuery();
             }
         }
     }

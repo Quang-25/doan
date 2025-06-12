@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="footerr.ascx.cs" Inherits="doan.src.footerr.footerr" %>
+<link rel="stylesheet" href="footer.css" />
    <div class="footer">
        <div class="footer-column">
            <span class="footer-icon"><i class="fa-solid fa-house"></i></span>
@@ -23,4 +24,5 @@
                <span class="social-icon"><i class="fa-brands fa-pinterest"></i></span>
            </div>
        </div>
+       <asp:Label ID="lblnguoidung" runat="server" ForeColor="White" Font-Size="18px" Style="margin-top:42px" />
    </div>
