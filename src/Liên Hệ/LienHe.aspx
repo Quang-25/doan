@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Liên hệ</title>
-     <link rel="stylesheet" href="../home/trang.css" />
+     <link rel="stylesheet" href="../home/trangchu.css" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style type="text/css">
     body{
@@ -114,7 +114,7 @@
     }
     .captcha-input{
         width: 100%;
-        padding: 10px; padding-right:120px; /*Chừa chỗ cho mã + nút */; border: 1px solid #ccc;
+        padding: 10px; padding-right:120px; /*Chừa chỗ cho mã + nút */ border: 1px solid #ccc;
         border-radius: 4px; box-sizing: border-box;
     }
     .captcha-code {
