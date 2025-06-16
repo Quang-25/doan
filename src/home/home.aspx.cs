@@ -29,6 +29,8 @@ namespace doan.src.home
                     return;
                 }
                 pageload();
+                rptSanPhamMoi.DataSource = GetSanPhamMoi();
+                rptSanPhamMoi.DataBind();
             }
         }
 
@@ -205,6 +207,77 @@ namespace doan.src.home
                 }
             }
             return Oder;
+        }
+        public List<modelItems> GetSanPhamMoi()
+        {
+            List<modelItems> products = new List<modelItems>();
+            string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                
+                string query = @"SELECT TOP 6 MaSP, TenSP, Gia, KhuyenMai, TongSoLuong, LoaiSP, MoTa, TinhTrang, HinhAnhChinh, XuatXu, NgayTao 
+                         FROM SanPham 
+                         ORDER BY NgayTao DESC";
+                string userId = GetUserIdFromCookie();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@userId", userId);
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int giaGoc = Convert.ToInt32(reader["Gia"]);
+                        int khuyenMaiPhanTram = Convert.ToInt32(reader["KhuyenMai"]);
+                        int giaSauKhuyenMai = giaGoc;
+                        if (khuyenMaiPhanTram > 0)
+                        {
+                            giaSauKhuyenMai = giaGoc - (giaGoc * khuyenMaiPhanTram / 100);
+                        }
+                        modelItems item = new modelItems
+                        {
+                            MaSP = Convert.ToInt32(reader["MaSP"]),
+                            TenSP = reader["TenSP"].ToString(),
+                            Gia = giaSauKhuyenMai,
+                            KhuyenMai = khuyenMaiPhanTram,
+                            TongSoLuong = Convert.ToInt32(reader["TongSoLuong"]),
+                            LoaiSP = reader["LoaiSP"].ToString(),
+                            MoTa = reader["MoTa"].ToString(),
+                            TinhTrang = reader["TinhTrang"].ToString(),
+                            HinhAnhChinh = reader["HinhAnhChinh"].ToString(),
+                            XuatXu = reader["XuatXu"].ToString(),
+                            NgayTao = Convert.ToDateTime(reader["NgayTao"]),
+                        };
+                        products.Add(item);
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("Lỗi: " + ex.Message);
+                }
+            }
+            return products;
+        }
+        protected void OnClickUpdateItem(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "update")
+            {
+                string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string userId = GetUserIdFromCookie();
+                    string query = @"INSERT INTO DonHang (Soluong,MaND,MaSP) VALUES (@soluong,@userId,@idSp)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@soluong", 1);
+                    cmd.Parameters.AddWithValue("@userId", userId);
+                    cmd.Parameters.AddWithValue("@idSp", e.CommandArgument.ToString());
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                pageload();
+                headerHome.pageload();
+            }
         }
         public class modelItems
         {
