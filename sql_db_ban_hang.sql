@@ -1,0 +1,53 @@
+-- Tạo bảng NguoiDung
+CREATE TABLE NguoiDung (
+    MaND SERIAL PRIMARY KEY,
+    TenND NVARCHAR(100) NOT NULL,
+    Sdt NVARCHAR(12) NOT NULL,
+    Email NVARCHAR(100),
+    TenDangNhap NVARCHAR(50) NOT NULL,
+    MatKhau NVARCHAR(100) NOT NULL,
+    ChucVu NVARCHAR(16) NOT NULL,
+    DiaChi NVARCHAR(255) NOT NULL,
+    SoDu INTEGER
+);
+
+-- Tạo bảng SanPham
+CREATE TABLE SanPham (
+    MaSP SERIAL PRIMARY KEY,
+    TenSP NVARCHAR(100) NOT NULL,
+    Gia INTEGER,
+    KhuyenMai INTEGER,
+    TongSoLuong INTEGER,
+    SoLuongBan INTEGER,
+    LoaiSP NVARCHAR(100) NOT NULL,
+    MoTa TEXT NOT NULL,
+    TinhTrang NVARCHAR(20) NOT NULL CHECK (TinhTrang IN ('Còn hàng', 'Hết hàng')),
+    HinhAnhChinh NVARCHAR(255) NOT NULL,
+    HinhAnhPhu NVARCHAR(255),
+    HinhAnhPhu2 NVARCHAR(255),
+    XuatXu NVARCHAR(100),
+    NgayTao TIMESTAMP NOT NULL
+);
+
+-- Tạo bảng DonHang
+CREATE TABLE DonHang (
+    MaDH SERIAL PRIMARY KEY,
+    SoLuong INTEGER,
+    MaND INTEGER NOT NULL,
+    MaSP INTEGER NOT NULL,
+    NgayDatHang TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (MaND) REFERENCES NguoiDung(MaND),
+    FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP)
+);
+
+-- Tạo bảng LienHe
+CREATE TABLE LienHe (
+    MaLH SERIAL PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    DienThoai NVARCHAR(12) NOT NULL,
+    DiaChi NVARCHAR(255) NOT NULL,
+    MoTa TEXT,
+    MaND INTEGER NOT NULL,
+    FOREIGN KEY (MaND) REFERENCES NguoiDung(MaND)
+);

@@ -37,7 +37,9 @@ namespace doan.src.footerr
                 cmd.Parameters.AddWithValue("@TenDangNhap", tenDangNhap);
                 conn.Open();
                 object result = cmd.ExecuteScalar();
-                return result != null ? Convert.ToInt32(result) : 0;
+                return (result == null || result == DBNull.Value) ? 0 : Convert.ToInt32(result);
+                //return result != null ? Convert.ToInt32(result) : 0; Code cũ
+
             }
         }
     }

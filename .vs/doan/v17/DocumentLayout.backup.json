@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\doan1\\",
+  "WorkspaceRootPath": "C:\\Users\\Rinva\\source\\repos\\doan196\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan1\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\hp\\source\\repos\\doan1\\src\\home\\trang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\trang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\footerr\\footerr.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\footerr\\footerr.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\footerr\\footerr.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\rinva\\source\\repos\\doan196\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\trang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\trang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\footerr\\footerr.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\HP\\source\\repos\\doan1\\src\\home\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "footerr.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\footerr\\footerr.ascx.cs",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx.cs",
               "RelativeDocumentMoniker": "src\\footerr\\footerr.ascx.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\footerr\\footerr.ascx.cs",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx.cs",
               "RelativeToolTip": "src\\footerr\\footerr.ascx.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAcwCQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T10:45:03.583Z",
               "IsPinned": true,
@@ -48,11 +48,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "home.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\home\\home.aspx",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx",
               "RelativeDocumentMoniker": "src\\home\\home.aspx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\home\\home.aspx",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx",
               "RelativeToolTip": "src\\home\\home.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -64,15 +64,14 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "footerr.ascx",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\footerr\\footerr.ascx",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx",
               "RelativeDocumentMoniker": "src\\footerr\\footerr.ascx",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\footerr\\footerr.ascx",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx",
               "RelativeToolTip": "src\\footerr\\footerr.ascx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
               "WhenOpened": "2025-06-10T10:43:41.126Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -84,37 +83,43 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "trang.css",
-              "DocumentMoniker": "C:\\Users\\HP\\Source\\Repos\\doan1\\src\\home\\trang.css",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\trang.css",
               "RelativeDocumentMoniker": "src\\home\\trang.css",
-              "ToolTip": "C:\\Users\\HP\\Source\\Repos\\doan1\\src\\home\\trang.css",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\trang.css",
               "RelativeToolTip": "src\\home\\trang.css",
-              "ViewState": "AgIAAE0CAAAAAAAAAAAlwFYCAAACAAAAAAAAAA==",
+              "ViewState": "AgIAANsBAAAAAAAAAAAlwNsBAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-04T09:11:58.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T09:11:58.79Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "home.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\doan1\\src\\home\\home.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx.cs",
               "RelativeDocumentMoniker": "src\\home\\home.aspx.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\doan1\\src\\home\\home.aspx.cs",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx.cs",
               "RelativeToolTip": "src\\home\\home.aspx.cs",
               "ViewState": "AgIAAPAAAAAAAAAAAAAAABUBAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T08:44:03.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-15T08:44:03.108Z"
             }
           ]
         }
