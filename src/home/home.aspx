@@ -59,11 +59,11 @@
         <h3 class="tieude">Đồ uống khuyến mãi</h3>
         <div class="nen">
             <asp:Repeater ID="rptSanPham" runat="server" OnItemCommand="rptSanPham_ItemCommand1">
-                <ItemTemplate>
-                    <div class=" juice">
+                <ItemTemplate>                    <div class="juice">
                         <div class="anhsanpham">
-                            <img src='<%# Eval("HinhAnhChinh") %>' alt='<%# Eval("TenSP") %>' />
-
+                            <a href='/src/chitiet/chitiet.aspx?id=<%# Eval("MaSP") %>' class="product-link">
+                                <img src='<%# Eval("HinhAnhChinh") %>' alt='<%# Eval("TenSP") %>' />
+                            </a>
                             <div class="overlay">
                                 <asp:Button ID="btn_sua" runat="server" CssClass="order-btn"
                                     Text="Đặt hàng"
@@ -73,7 +73,11 @@
                                     CausesValidation="false"
                                     UseSubmitBehavior="false" />
                             </div>
-                            <div class="name"><%# Eval("TenSP") %></div>
+                            <div class="name">
+                                <a href='/src/chitiet/chitiet.aspx?id=<%# Eval("MaSP") %>' class="product-name-link">
+                                    <%# Eval("TenSP") %>
+                                </a>
+                            </div>
                             <div class="price">
                                 <span class="new-price"><%# Eval("Gia") %> đ </span>
                             </div>
@@ -86,17 +90,22 @@
         <h3 class="tieude">Sản phẩm mới</h3>
         <div class="quang">
             <asp:Repeater ID="rptSanPhamMoi" runat="server" OnItemCommand="OnClickUpdateItem">
-                <ItemTemplate>
-                    <div class="juice1">
+                <ItemTemplate>                    <div class="juice1">
                         <div class="anhsanpham1">
-                            <img src='<%# Eval("HinhAnhChinh") %>' alt='<%# Eval("TenSP") %>' />
+                            <a href='/src/chitiet/chitiet.aspx?id=<%# Eval("MaSP") %>' class="product-link">
+                                <img src='<%# Eval("HinhAnhChinh") %>' alt='<%# Eval("TenSP") %>' />
+                            </a>
                             <asp:Button ID="btnDatHangMoi" runat="server"
                                 Text="Đặt hàng"
                                 CommandName="update"
                                 CommandArgument='<%# Eval("MaSP") %>'
                                 CssClass="btn-order" />
                         </div>
-                        <div class="ten"><%# Eval("TenSP") %></div>
+                        <div class="ten">
+                            <a href='/src/chitiet/chitiet.aspx?id=<%# Eval("MaSP") %>' class="product-name-link">
+                                <%# Eval("TenSP") %>
+                            </a>
+                        </div>
                         <div class="price1">
                             <span class="new-price1"><%# Eval("Gia") %> đ </span>
                         </div>

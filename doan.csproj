@@ -178,6 +178,8 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="sql_db_ban_hang.sql" />
+    <Content Include="src\chitiet\chitiet.aspx" />
+    <Content Include="src\chitiet\chitiet.css" />
     <Content Include="src\dangky\dangky.aspx" />
     <Content Include="src\dangky\giaodien.css" />
     <Content Include="src\dangnhap\login.aspx" />
@@ -243,6 +245,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="src\chitiet\chitiet.aspx.cs">
+      <DependentUpon>chitiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\chitiet\chitiet.aspx.designer.cs">
+      <DependentUpon>chitiet.aspx</DependentUpon>
     </Compile>
     <Compile Include="src\dangky\dangky.aspx.cs">
       <DependentUpon>dangky.aspx</DependentUpon>

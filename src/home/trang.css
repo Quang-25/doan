@@ -598,3 +598,31 @@
     color: #ffc107;
   
 }
+
+/* CSS cho liên kết sản phẩm */
+.product-link {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.product-name-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.product-name-link:hover {
+    color: #59bd56;
+}
+
+.juice .anhsanpham img,
+.juice1 .anhsanpham1 img {
+    transition: transform 0.3s ease;
+}
+
+.juice .anhsanpham:hover img,
+.juice1 .anhsanpham1:hover img {
+    transform: scale(1.1);
+}

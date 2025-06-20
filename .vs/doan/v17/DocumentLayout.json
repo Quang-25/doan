@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Rinva\\source\\repos\\doan196\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\footerr\\footerr.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\rinva\\source\\repos\\doan196\\src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\home\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\chitiet\\chitiet.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\chitiet\\chitiet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\chitiet\\chitiet.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\chitiet\\chitiet.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|c:\\users\\rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|solutionrelative:src\\footerr\\footerr.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66EFAFE5-F7F4-4323-8BF5-575F14B8486C}|doan.csproj|C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\trang.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -30,17 +46,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "footerr.ascx.cs",
               "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx.cs",
               "RelativeDocumentMoniker": "src\\footerr\\footerr.ascx.cs",
               "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx.cs",
               "RelativeToolTip": "src\\footerr\\footerr.ascx.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAUwBkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T10:45:03.583Z",
               "IsPinned": true,
@@ -48,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "home.aspx",
               "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx",
               "RelativeDocumentMoniker": "src\\home\\home.aspx",
@@ -62,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "footerr.ascx",
               "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\footerr\\footerr.ascx",
               "RelativeDocumentMoniker": "src\\footerr\\footerr.ascx",
@@ -83,10 +99,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
@@ -104,6 +116,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "chitiet.css",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.css",
+              "RelativeDocumentMoniker": "src\\chitiet\\chitiet.css",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.css",
+              "RelativeToolTip": "src\\chitiet\\chitiet.css",
+              "ViewState": "AgIAAEYCAAAAAAAAAAAqwGsCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-19T17:21:07.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "chitiet.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx.designer.cs",
+              "RelativeDocumentMoniker": "src\\chitiet\\chitiet.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx.designer.cs",
+              "RelativeToolTip": "src\\chitiet\\chitiet.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T17:20:49.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "chitiet.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx.cs",
+              "RelativeDocumentMoniker": "src\\chitiet\\chitiet.aspx.cs",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx.cs",
+              "RelativeToolTip": "src\\chitiet\\chitiet.aspx.cs",
+              "ViewState": "AgIAAEkBAAAAAAAAAADwv2wBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T17:20:31.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "chitiet.aspx",
+              "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx",
+              "RelativeDocumentMoniker": "src\\chitiet\\chitiet.aspx",
+              "ToolTip": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\chitiet\\chitiet.aspx",
+              "RelativeToolTip": "src\\chitiet\\chitiet.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-19T17:20:12.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "trang.css",
               "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\trang.css",
               "RelativeDocumentMoniker": "src\\home\\trang.css",
@@ -115,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "home.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Rinva\\source\\repos\\doan196\\src\\home\\home.aspx.cs",
               "RelativeDocumentMoniker": "src\\home\\home.aspx.cs",
